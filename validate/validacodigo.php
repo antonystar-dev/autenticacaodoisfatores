@@ -4,8 +4,8 @@ $codigo = $_POST['codigo'];
 //echo $codigo;
 echo '<a href="index.html">Voltar para pg anterior</a>';
 
-require './banco.php';
-$sql = 'SELECT codigo FROM verificador WHERE id=1';
+require './bancovalida.php';
+$sql = 'SELECT cod_temp FROM usuarios WHERE id=1';
 $result = $conn->query($sql);
 
 
@@ -13,8 +13,9 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     //echo $row["codigo"];
     //echo md5($row["codigo"]);
-    if (md5($codigo) == $row ["codigo"]) {
+    if (md5($codigo) == $row ["cod_temp"]) {
         echo "vc será redirecionado para pg correta";
+        header("Refresh: 1;url='redireciona.php");
         }else{
             echo "Código inválido";
         }
