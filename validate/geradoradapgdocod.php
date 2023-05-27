@@ -1,24 +1,24 @@
 <?php
 
-require './banco.php';
+require './bancovalida.php';
 
 $link = rand(1, 1000);
 //echo $link;
 
 
-$gerapg = "UPDATE verificador SET codigo=md5($link) WHERE id=2";
+$gerapg = "UPDATE usuarios SET dir_temp=md5($link) WHERE id=1";
 if ($conn->query($gerapg) === TRUE) {
   
-  $sql = 'SELECT codigo FROM verificador WHERE id=2';
+  $sql = 'SELECT dir_temp FROM usuarios WHERE id=1';
 $result = $conn->query($sql);
 $nome=md5($link);
-rename("ee8bdb7ae66cf9fd61968da38b79c0f6/c557508f361ba01b84c00c6b62183138.php", "ee8bdb7ae66cf9fd61968da38b79c0f6/$nome.php");
+rename("../session/ee8bdb7ae66cf9fd61968da38b79c0f6/c557508f361ba01b84c00c6b62183138.php", "../session/ee8bdb7ae66cf9fd61968da38b79c0f6/$nome.php");
 
 
 if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
-     $link=$row["codigo"];
-    echo "<a href='ee8bdb7ae66cf9fd61968da38b79c0f6/$link.php'>vamos</a>";
+     $link=$row["dir_temp"];
+    echo "<a href='../session/ee8bdb7ae66cf9fd61968da38b79c0f6/$link.php'>vamos</a>";
     //echo md5($row["codigo"]);
    
     

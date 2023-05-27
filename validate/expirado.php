@@ -1,7 +1,7 @@
 <?php
 
-require './banco.php';
-$sql = "UPDATE verificador SET codigo='EXPIRADO' WHERE id=1";
+require './bancovalida.php';
+$sql = "UPDATE usuarios SET cod_temp='EXPIRADO' WHERE id=1";
 
 if ($conn->query($sql) === TRUE) {
   echo "Código Expirado";
@@ -13,13 +13,13 @@ if ($conn->query($sql) === TRUE) {
 
 
 
-$sql = 'SELECT codigo FROM verificador WHERE id=2';
+$sql = 'SELECT cod_temp FROM usuarios WHERE id=1';
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
-     $nome=$row["codigo"];
+     $nome=$row["cod_temp"];
     
-    rename("ee8bdb7ae66cf9fd61968da38b79c0f6/$nome.php", "ee8bdb7ae66cf9fd61968da38b79c0f6/c557508f361ba01b84c00c6b62183138.php");
+    rename("../session/ee8bdb7ae66cf9fd61968da38b79c0f6/$nome.php", "../session/ee8bdb7ae66cf9fd61968da38b79c0f6/c557508f361ba01b84c00c6b62183138.php");
     header("Refresh: 1;url=geralink.php");
     
   }

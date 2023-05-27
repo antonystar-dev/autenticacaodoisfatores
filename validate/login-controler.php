@@ -15,7 +15,11 @@ if (!empty($email)) {
     $_SESSION["perfilcol"] = $email["perfilcol"];
  
       
-    header("Refresh: 1;url='redireciona.php");
+   // header("Refresh: 1;url='redireciona.php");
+   //realizar o processo de verificação de duas etapas
+  
+   require_once 'enviaemail.php';
+   header("Refresh: 3;url='../codigo.html");
    
 } else {
     $msg = "Usuário ou senha incorreto";
