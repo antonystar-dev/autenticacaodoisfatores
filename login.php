@@ -1,7 +1,7 @@
 <?php
 
 $codigo = $_POST['codigo'];
-echo $codigo;
+//echo $codigo;
 echo '<a href="index.html">Voltar para pg anterior</a>';
 
 require './banco.php';
@@ -16,7 +16,7 @@ if ($result->num_rows > 0) {
     if (md5($codigo) == $row ["codigo"]) {
         echo "vc será redirecionado para pg correta";
         }else{
-            echo "esta errado";
+            echo "Código inválido";
         }
     
   }

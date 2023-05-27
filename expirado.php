@@ -1,15 +1,26 @@
 <?php
 
 require './banco.php';
+$sql = "UPDATE verificador SET codigo='EXPIRADO' WHERE id=1";
+
+if ($conn->query($sql) === TRUE) {
+  echo "Código Expirado";
+  
+
+} else {
+  echo "deu erro " . $conn->error;
+}
+
+
 
 $sql = 'SELECT codigo FROM verificador WHERE id=2';
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
-    echo $nome=$row["codigo"];
+     $nome=$row["codigo"];
     
-    rename("token/$nome.php", "token/c557508f361ba01b84c00c6b62183138.php");
-    header("Refresh: 5;url=geralink.php");
+    rename("ee8bdb7ae66cf9fd61968da38b79c0f6/$nome.php", "ee8bdb7ae66cf9fd61968da38b79c0f6/c557508f361ba01b84c00c6b62183138.php");
+    header("Refresh: 1;url=geralink.php");
     
   }
 } else {

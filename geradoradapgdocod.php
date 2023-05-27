@@ -12,13 +12,13 @@ if ($conn->query($gerapg) === TRUE) {
   $sql = 'SELECT codigo FROM verificador WHERE id=2';
 $result = $conn->query($sql);
 $nome=md5($link);
-rename("token/c557508f361ba01b84c00c6b62183138.php", "token/$nome.php");
+rename("ee8bdb7ae66cf9fd61968da38b79c0f6/c557508f361ba01b84c00c6b62183138.php", "ee8bdb7ae66cf9fd61968da38b79c0f6/$nome.php");
 
 
 if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
      $link=$row["codigo"];
-    echo "<a href='token/$link.php'>vamos</a>";
+    echo "<a href='ee8bdb7ae66cf9fd61968da38b79c0f6/$link.php'>vamos</a>";
     //echo md5($row["codigo"]);
    
     

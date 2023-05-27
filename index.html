@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Login</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <title>Login</title>
 </head>
 <body>
-    <form method="post" action="login.php">
-        <input type="text" name="codigo" placeholder="Digite o codigo"/>
-        <input type="submit" value="verificar"/>
+    <div id="divlogin">
+           <form action="login-controle.php" method="post" id="formlogin">
+        
+              <div>
+                  <label>Usuário:</label>
+                  <input type="text" name="nome"/>
+              </div>
+              <div>
+                  <label>Senha:</label>
+                  <input type="password" name="senha"/>
+              </div>                
+              
+                  <div>
+                      <input type="submit" value="Entrar"/>
+                      <input type="reset" value="Esqueci a senha"/>
+                  </div>
+          
+      </form> 
+  </div>
 
-    </form>
-    <a href="geralink.php">gerar codigo</a>
-    
 </body>
 </html>
