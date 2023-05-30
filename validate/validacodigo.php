@@ -1,21 +1,15 @@
 <?php
-require './bancovalida.php';
 session_start();
-require_once 'loginBD.php';
-
-$loginBD = new LoginBD();
-$email = $loginBD->login($email, $senha);
-$teste=$_SESSION["email"] = $email["email"];
-//$teste="aaaaaa";
-echo $teste;
-//session_destroy();
+require './bancovalida.php';
+$id= $_SESSION["id"];
 $codigo = $_POST['codigo'];
 
 echo '<a href="index.html">Voltar para pg anterior</a>';
 
 
-$sql = 'SELECT cod_temp FROM usuarios WHERE id=$teste';
-echo "ARRUMAR O ID";
+$sql = "SELECT cod_temp FROM usuarios WHERE id=$id ";
+
+
 $result = $conn->query($sql);
 
 
