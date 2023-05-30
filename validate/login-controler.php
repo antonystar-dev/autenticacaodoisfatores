@@ -13,9 +13,10 @@ $email = $loginBD->login($email, $senha);
 if (!empty($email)) {
     $_SESSION["email"] = $email["email"];
     $_SESSION["perfilcol"] = $email["perfilcol"];
+    $_SESSION["id"] = $email["id"];
  
       
-   // header("Refresh: 1;url='redireciona.php");
+    header("Refresh: 1;url='redireciona.php");
    //realizar o processo de verificação de duas etapas
   
    require_once 'enviaemail.php';

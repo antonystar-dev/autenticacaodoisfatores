@@ -12,7 +12,7 @@ class LoginBD {
 
     public function login($email, $senha) {
         try {
-            $sql = "SELECT usuarios.nome,usuarios.email, perfil.perfilcol FROM `usuarios` INNER JOIN perfil on usuarios.Perfil_id = perfil.id WHERE email=? and senha=? ";
+            $sql = "SELECT usuarios.nome,usuarios.email,usuarios.id, perfil.perfilcol FROM `usuarios` INNER JOIN perfil on usuarios.Perfil_id = perfil.id WHERE email=? and senha=? ";
             $stmt = $this->pdo->prepare($sql);
             $stmt->bindValue(1, $email);
             $stmt->bindValue(2, $senha);
