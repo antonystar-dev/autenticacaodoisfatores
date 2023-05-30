@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" type="text/css" href="css/style.css"/>
-  <title>Login</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <title>Login</title>
 </head>
+
 <body>
-    <div id="divlogin">
-           <form action="validate/login-controler.php" method="post" id="formlogin">
-        
-              <div>
-                  <label>E-mail:</label>
-                  <input type="text" name="email"/>
-              </div>
-              <div>
-                  <label>Senha:</label>
-                  <input type="password" name="senha"/>
-              </div>                
-              
-                  <div>
-                      <input type="submit" value="Entrar"/>
-                      <input type="reset" value="Esqueci a senha"/>
-                  </div>
-          
-      </form> 
-  </div>
+
+    <label class="nomelogo">Antonystar</label>
+    <label class="icologo">#</label>
+
+    <form action="validate/login-controler.php" method="post" id="formlogin">
+
+
+        <div>
+            <label>E-mail:</label><label class="pessoa">a</label>
+            <input type="text" name="email" />
+        </div>
+        <div>
+            <label>Senha:</label>
+            <input type="password" name="senha" />
+        </div>
+
+        <div>
+            <input type="submit" value="Entrar" />
+            <input type="reset" value="Esqueci a senha" />
+        </div>
+
+
+    </form>
+
 
 </body>
+
 </html>
