@@ -1,58 +1,67 @@
 .img {
-    background-image: url("../img/logo.ico"),url("../img/fundo.jpg");
+    background-image: url("../img/logo.ico"), url("../img/fundo.jpg");
     background-position: 80%;
-  
+
     background-repeat: no-repeat;
-    height: 1024px;
+    height: 900px;
     width: 100%;
     /* background-color:#4C4A62; */
-    background-color: rgba(76,74,98,0.7);
+    background-color: rgba(76, 74, 98, 0.7);
     color: aliceblue;
     font-family: Arial, Helvetica, sans-serif;
-        
- }
- .lateral{
-    background-color: rgba(76,74,98,0.2);
-    height: 1024px;
-    width: 30%;
-    
- }
- .login{
-    /* background-color: red; */
-    padding:250px 30px 30px 80px;
-    
 
- }
- .nomelogo{
-    text-transform:uppercase;
+}
+
+.lateral {
+    background-color: rgba(76, 74, 98, 0.2);
+    height: 900px;
+    width: 30%;
+
+}
+
+.login {
+    /* background-color: red; */
+    padding: 250px 30px 30px 80px;
+
+
+}
+
+.nomelogo {
+    text-transform: uppercase;
     font-weight: bold;
-    font-size:25px;
-    
- }
- .campoform{
+    font-size: 25px;
+
+}
+
+.campoform {
     /* background-color: green; */
     background-position: center;
-    width:90%;
- }
- input[type=text],[type=password] {
+    width: 90%;
+}
+
+input[type=text],[type=password] {
     width: 90%;
     padding: 12px 15px;
-    margin: 4px 0;
+    margin: 4px;
     display: inline-block;
     border: 0px;
     border-radius: 4px;
     font-size: large;
     text-decoration: white;
     background-color: transparent;
-         
-  }
-  input[type=text]:active{
+
+}
+
+
+input[type=text]:active {
     border: 0px;
-  }
-  ::placeholder {
+}
+
+::placeholder {
     color: white;
-  }
-  input[type=submit] {
+}
+
+input[type=submit] {
     width: 100%;
     background-color: #CFD8DC;
     color: #4C4A62;
@@ -61,9 +70,17 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    text-transform:uppercase;
-  }
-  
-  input[type=submit]:hover {
+    text-transform: uppercase;
+}
+
+input[type=submit]:hover {
     background-color: #CFD8DC;
-  }
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: rgb(206, 205, 202);
+    text-decoration: none;
+}
