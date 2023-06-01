@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="img">
+        <div class="lateral">
+            <div class="login">
+                <label class="nomelogo">Login</label>
+                <form action="validate/login-controler.php" method="post" id="formlogin">
+                    <div class="campoform">
+                        <input type="text" name="email" placeholder=" e-m@il.com" />
+                    </div>
+                    <div class="campoform">
+                        <input type="password" name="senha" placeholder="senha" />
+                    </div>
+                    <div class="campoform">
+                        <br/>
+                        <a href="#">Esqueci a senha</a>
+                        <input type="submit" value="Entrar" />
+                        
+                        <span>Não tem conta? <a href="#">Faça seu cadastro</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
