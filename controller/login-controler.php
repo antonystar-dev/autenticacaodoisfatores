@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'loginBD.php';
+require_once '../models/loginBD.php';
 
 $email = $_POST["email"];
 $senha = $_POST["senha"];
@@ -15,14 +15,14 @@ if (!empty($email)) {
     $_SESSION["perfilcol"] = $email["perfilcol"];
     $_SESSION["id"] = $email["id"];
      
-   require_once 'enviaemail.php';
-   header("Refresh: 3;url='../codigo.html");
+   require_once '../models/enviaemail.php';
+   header("Refresh: 3;url='../view/codigo.html");
    
 } else {
     $msg = "Usuário ou senha incorreto";
     
     echo $msg;
-    header("Refresh: 3;url='../");
+    header("Refresh: 3;url='../view/index.html");
     
     
 }

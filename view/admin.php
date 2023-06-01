@@ -1,6 +1,6 @@
 <?php
 session_start();
-        include 'validate/validalogin.php';
+        include '../controller/validalogin.php';
         ?>
 <!DOCTYPE html>
 <html>
@@ -16,7 +16,7 @@ session_start();
     <div>
         <h1>Pagina do Administrador</h1>
         <p>Seja bem vindo</p>
-        <a href="validate/sair.php">Sair</a>
+        <a href="../controller/sair.php">Sair</a>
     </div>
 </body>
 </html>

@@ -19,13 +19,13 @@ if ($result->num_rows > 0) {
     if (md5($codigo) == $row ["cod_temp"]) {
      
         echo "vc será redirecionado para pg correta";
-        header("Refresh: 1;url='redireciona.php");
+        header("Refresh: 1;url='../controller/redireciona.php");
         }elseif($codigo =="EXPIRADO"){
             echo "Código inválido";
-            header("Refresh: 1;url='../");
+            header("Refresh: 1;url='../view/");
         }else{
           echo "Código inválido";
-          header("Refresh: 1;url='../");
+          header("Refresh: 1;url='../view/");
         }
     
   }

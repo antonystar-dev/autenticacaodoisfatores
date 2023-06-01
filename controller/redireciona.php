@@ -7,10 +7,10 @@
                     switch ($_SESSION["perfilcol"]) {
                         case "Administrador":
                            
-                            header("Location:../admin.php"); 
+                            header("Location:../view/admin.php"); 
                             break;
                         case "Usuario":
-                             header("Location:../usuario.php"); 
+                             header("Location:../view/usuario.php"); 
                             break;
                        
                     }
