@@ -48,14 +48,20 @@ input[type=text],[type=password] {
     border-radius: 4px;
     font-size: large;
     text-decoration: white;
-    background-color: transparent;
+     background-color: transparent;
+   
 
 }
 
-
-input[type=text]:active {
+input[type=text]:hover {
     border: 0px;
+    background-color: white;
 }
+input[type=password]:hover{
+    border: 0px;
+    background-color: white;
+}
+
 
 ::placeholder {
     color: white;
