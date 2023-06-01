@@ -8,8 +8,8 @@ if ($result->num_rows > 0) {
      $codtemp=$row["cod_temp"];
      $dirtemp=$row["dir_temp"];
    
-    unlink("temp/$dirtemp/$dirtemp.php");
-    rmdir("temp/$dirtemp/");
+    unlink("../controller/temp/$dirtemp/$dirtemp.php");
+    rmdir("../controller/temp/$dirtemp/");
     
     
   }
@@ -25,7 +25,7 @@ if ($conn->query($sql) === TRUE) {
 } else {
   echo "deu erro " . $conn->error;
 }
-header("Refresh: 1;url=geralink.php");
+//header("Refresh: 1;url=geralink.php");
 
 
 
