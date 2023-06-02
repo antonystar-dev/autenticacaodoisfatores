@@ -1,7 +1,7 @@
 <?php
 session_start();
 require '../../../models/bancovalida.php';
-$id= $_SESSION["id"];
+$id= $_GET["id"];
 //header("Refresh:3");
 $codigo = rand(100000, 999999);
 echo $codigo;
