@@ -1,7 +1,8 @@
 <?php
-session_start();
-        include '../controller/validalogin.php';
-        ?>
+include '../controller/session.php';
+include '../controller/validalogin.php';
+echo $_SESSION["email"];
+?>
 <!DOCTYPE html>
 <html>
 <head>

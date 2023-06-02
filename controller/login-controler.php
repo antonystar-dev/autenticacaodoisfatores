@@ -16,7 +16,7 @@ if (!empty($email)) {
     $_SESSION["id"] = $email["id"];
      
    require_once '../models/enviaemail.php';
-   header("Refresh: 3;url='../view/codigo.html");
+   header("Refresh: 1;url='../view/codigo.php");
    
 } else {
     $msg = "Usuário ou senha incorreto";

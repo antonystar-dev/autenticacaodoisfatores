@@ -2,9 +2,7 @@
 require '../../models/bancovalida.php';
 session_start();
 $id= $_GET["id"];
-
 $nome = rand(1000, 9999);
-
 $gerapg = "UPDATE usuarios SET dir_temp=md5($nome) WHERE id=$id ";
 if ($conn->query($gerapg) === TRUE) {
   
@@ -12,21 +10,15 @@ if ($conn->query($gerapg) === TRUE) {
 $result = $conn->query($sql);
 
 $diretorio=md5($nome);
-
-
   $original = "../session/modelo.php";
    mkdir("../temp/$diretorio");
   $temporario = "../temp/$diretorio/$diretorio.php";
 !copy($original, $temporario);
-
-
 if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
      $diretorio=$row["dir_temp"];
-    echo "<a href='../temp/$diretorio/$diretorio.php?id=$id'>vamos</a>";
-  
+     echo header("Refresh: 0;url='../temp/$diretorio/$diretorio.php?id=$id'");
    
-    
   }
 } else {
   echo "não carregou";
@@ -39,11 +31,8 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 
-header("Refresh: 10;url=expirado.php");
-
-
-
-
-
+//header("Refresh: 10;url=expirado.php");
 
 ?>
+
+sdfsdfdsfdss
