@@ -1,13 +1,4 @@
 <?php
-require 'bancovalida.php';
-$link =sha1(rand(1000, 9999));
-$id= $_SESSION["id"];
-
-$original = "../controller/session/geracod.php";
-$temporario = "../controller/temp/$link.php";
-!copy($original, $temporario);
-
-
 echo $servidor=$_SERVER['SERVER_NAME'];
 
 if($servidor=="localhost"){
@@ -46,7 +37,5 @@ if($servidor=="localhost"){
     // envia o email
     mail($destinatario, $assunto , $body, "From: $emaildoservidor\r\n");
 }
-
-
 
 ?>
