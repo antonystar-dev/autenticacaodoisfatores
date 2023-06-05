@@ -8,6 +8,7 @@ class Banco
     private static $dbSenha = '';
     
     private static $cont = null;
+    
     public function __construct() 
     {
         die('A função Init nao é permitido!');
@@ -34,14 +35,5 @@ class Banco
         self::$cont = null;
     }
 }
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "login_db";
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+
 ?>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require './bancovalida.php';
+require './banco.php';
 $id= $_SESSION["id"];
 $codigo = $_POST['codigo'];
 

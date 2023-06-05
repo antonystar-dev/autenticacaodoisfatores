@@ -1,5 +1,6 @@
 <?php
-require 'bancovalida.php';
+//require 'bancovalida.php';
+//require 'banco.php';
 $link =sha1(rand(1000, 9999));
 $id= $_SESSION["id"];
 
