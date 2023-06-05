@@ -1,7 +1,7 @@
 <?php
 include '../controller/session.php';
 include '../controller/validalogin.php';
-include '../controller/perfiladmin.php';
+include '../controller/perfilusuario.php';
 
 ?>
 <!DOCTYPE html>
@@ -9,13 +9,12 @@ include '../controller/perfiladmin.php';
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Pagina admin</title>
+    <title>Pagina do usuario</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
     
 </head>
 <body>
-
 <div class="menu">
         <div class="itens-menu-grupo">
             <span class="itens-menu">home</span>
@@ -30,8 +29,8 @@ include '../controller/perfiladmin.php';
         </div>
     </div>
     <div>
-        <h1>Pagina do Administrador</h1>
-        <p>Aqui fica as coisas que o administrador terá acesso</p>
+        <h1>Pagina do Usuario</h1>
+        <p>Aqui fica as coisas que o usuario terá acesso</p>
         
     </div>
 </body>
