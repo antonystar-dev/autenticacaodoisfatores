@@ -1,30 +1,9 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Verificação de duas etapas</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-
-
-    <link rel='stylesheet' type='text/css' media='screen' href='view/css/main.css'>
-    
-</head>
-
-<body>
-    <div class="menu">
-        <div class="itens-menu-grupo">
-            <span class="itens-menu">home</span>
-            <span class="itens-menu">galeria</span>
-            <span class="itens-menu">contatos</span>
-            <span class="itens-menu">sobre</span>
-     <!--    </div>
-        <div class="botoes-acao"> -->
-            <a href="view/index.html"><button class="botao">Entrar</button></a>
-            <a href="view/cadastro.html"><button class="botao">Cadastrar</button></a>
-        </div>
-    </div>
+<?php
+require './view/header.php';
+?>
+<?php
+require './view/menu.php';
+?>
     <div>
         <h1>Tela inicial do sistema</h1>
         <p>
@@ -40,7 +19,6 @@
             Esta exibição do sistema não está focada no Front-end mas sim nas funcionalidades apresentadas na camada Back-end.  
         </p>
     </div>
-
-</body>
-
-</html>
+    <?php
+require './view/footer.php';
+?>
