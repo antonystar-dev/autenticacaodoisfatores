@@ -7,16 +7,29 @@
         <!--    </div>
         <div class="botoes-acao"> -->
         <?php
-        
-        echo "teste";
-        
-        ?>
-        <button class="botao" onclick=login()>Entrar</button>
-        <button class="botao" onclick=cadastrar()>Cadastrar</button>
-        <button onclick=esqueciSenha()>Esqueci minha senha</button>
+
        
-        <button onclick=pgAdmin()>Admin</button>
-        <button onclick=pgUsuario()>Usuario</button>
-        <button onclick=resetaEstado()>teste</button>
+        $seçãoPerfilcol = null;
+        if (!empty($_SESSION["perfilcol"])) {
+            $seçãoPerfilcol = $_SESSION["perfilcol"];
+        }
+        switch ($seçãoPerfilcol) {
+            case "Administrador":
+                echo'<button onclick=pgAdmin() class="botao">Perfil</button>';
+                echo'<a href="./controller/sair.php"><button  class="botao">Sair</button></a>';
+                break;
+            case "Usuario":
+                echo'<button onclick=pgUsuario() class="botao">Perfil</button>';
+                echo'<a href="./controller/sair.php"><button  class="botao">Sair</button></a>';
+                break;
+                default:
+                echo'<button class="botao" onclick=login()>Entrar</button>';
+                echo'<button class="botao" onclick=cadastrar()>Cadastrar</button>';
+            }
+
+        ?>
+        
+        
+       
     </div>
 </div>

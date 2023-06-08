@@ -1,16 +1,26 @@
 <?php
         session_start();
+       
         include 'validaLogin.php';
+        
         ?> 
         
                     <?php
                     switch ($_SESSION["perfilcol"]) {
                         case "Administrador":
                            
-                            header("Location:../view/admin.php"); 
+                            echo'<script>
+                            localStorage.setItem("estadoAtual", "4")
+                            window.location.href="../";
+
+                            </script>'; 
                             break;
                         case "Usuario":
-                             header("Location:../view/usuario.php"); 
+                            echo'<script>
+                            localStorage.setItem("estadoAtual", "5")
+                            window.location.href="../";
+
+                            </script>'; 
                             break;
                        
                     }
