@@ -6,11 +6,10 @@
         <span class="itens-menu">sobre</span>
         <!--    </div>
         <div class="botoes-acao"> -->
-        <a href="view/index.html"><button class="botao">Entrar</button></a>
-        <a href="view/cadastro.html"><button class="botao">Cadastrar</button></a>
+        <button class="botao" onclick=login()>Entrar</button>
+        <button class="botao" onclick=cadastrar()>Cadastrar</button>
         <button onclick=esqueciSenha()>Esqueci minha senha</button>
-        <button onclick=cadastrar()>Cadastro</button>
-        <button onclick=login()>login</button>
+       
         <button onclick=pgAdmin()>Admin</button>
         <button onclick=pgUsuario()>Usuario</button>
         <button onclick=resetaEstado()>teste</button>
