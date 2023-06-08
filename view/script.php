@@ -1,10 +1,7 @@
 <script type="text/javascript">
      function paginaInicial() {
         localStorage.setItem("estadoAtual", "0")
-        document.getElementById("corpo").innerHTML = `
-            <?php
-            require 'view/esqueci-senha.html';
-            ?>`;
+        window.location.reload(true);
     }
     function esqueciSenha() {
         localStorage.setItem("estadoAtual", "1")
@@ -74,7 +71,7 @@
 
     }
     function resetaEstado() {
-        localStorage.setItem("estadoAtual", "");
+        localStorage.setItem("estadoAtual", "0");
     }
 
 </script>
