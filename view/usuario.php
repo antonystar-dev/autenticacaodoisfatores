@@ -1,7 +1,4 @@
 <?php
-//include '../controller/session.php';
-//include '../controller/validalogin.php';
-//include '../controller/perfilusuario.php';
 
 
 ?>

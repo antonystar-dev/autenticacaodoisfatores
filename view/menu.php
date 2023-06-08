@@ -6,6 +6,11 @@
         <span class="itens-menu">sobre</span>
         <!--    </div>
         <div class="botoes-acao"> -->
+        <?php
+        
+        echo "teste";
+        
+        ?>
         <button class="botao" onclick=login()>Entrar</button>
         <button class="botao" onclick=cadastrar()>Cadastrar</button>
         <button onclick=esqueciSenha()>Esqueci minha senha</button>

@@ -1,5 +1,8 @@
 <?php
+include './controller/session.php';
+//include './controller/validalogin.php';
 require './view/header.php';
+include './controller/validalogin.php';
 ?>
 <?php
 require './view/menu.php';

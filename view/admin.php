@@ -1,9 +1,3 @@
-<?php
-//include '../controller/session.php';
-//include '../controller/validalogin.php';
-//include '../controller/perfiladmin.php';
-
-?>
 
 <div>
     <h1>Pagina do Administrador</h1>

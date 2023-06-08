@@ -1,5 +1,5 @@
 <script type="text/javascript">
-     function paginaInicial() {
+    function paginaInicial() {
         localStorage.setItem("estadoAtual", "0")
         window.location.reload(true);
     }
@@ -30,21 +30,21 @@
         localStorage.setItem("estadoAtual", "4")
         document.getElementById("corpo").innerHTML = `
             <?php
-            require 'view/admin.php';
+            require 'view/perfilativo.php';
+
             ?>`;
     }
     function pgUsuario() {
         localStorage.setItem("estadoAtual", "5")
         document.getElementById("corpo").innerHTML = `
         <?php
-        require 'view/usuario.php';
+        require 'view/perfilativo.php';
         ?>`;
-
     }
 
     function estadoAtual() {
 
-        let lastname = localStorage.getItem("estadoAtual","0");
+        let lastname = localStorage.getItem("estadoAtual", "0");
         //alert(lastname);
         estadoAtual = lastname;
 
