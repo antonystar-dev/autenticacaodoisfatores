@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -103,26 +103,28 @@
     </style>
 </head>
 
-<body>
+<body> -->
+    <div class="geral">
     <div class="codigo">
-        <h2>Esqueci minha senha</h2>
+        <h2 class="tituloAlerta">Esqueci minha senha</h2>
         <hr />
 
         <form action="esqueci" method="post" id="form-rec-senha">
             <div class="campoform">
-                <input type="text" name="email" placeholder=" e-m@il.com" />
+                <input type="text" name="email" placeholder=" e-m@il.com" class="campoEmail"/>
             </div>
 
             <div class="campoform">
                 <br />
 
-                <input type="submit" value="Recuperar minha senha" /><br />
+                <button type="submit" class="botaoCarregar">Recuperar minha senha</button><br />
 
-                <span>Não tem conta? <a href="cadastro.html">Faça seu cadastro</a></span>
+                <span class="spanEsqueciSenha">Não tem conta? <a href="#"onclick=cadastrar() class="facaCadastro">Faça seu cadastro</a></span>
             </div>
         </form>
     </div>
+    </div>
 
-</body>
+<!-- </body>
 
-</html>
+</html> -->

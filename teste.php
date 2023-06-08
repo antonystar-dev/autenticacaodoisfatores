@@ -1,41 +1,31 @@
-<?php
-echo $servidor=$_SERVER['SERVER_NAME'];
+<!DOCTYPE html>
+<html lang="en">
 
-if($servidor=="localhost"){
-    $destinatario= $_SESSION["email"];
-    $nome = "Olá NOME_DO_USUARIO";
-    $emaildoservidor = "no-reply@antonystar.com";
-    $assunto="Segue o link para autenticação no sistema: http://localhost/doisfatores/controller/temp/$link.php?id=$id";
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     
-    $body = "===================================" . "\n";
-    $body = $body . "Autenticação de dois fatores" . "\n";
-    $body = $body . "===================================" . "\n\n";
-    $body = $body . "Nome: " . $nome . "\n";
-    $body = $body . "Assunto: " . $assunto . "\n";
-    
-    $body = $body . "===================================" . "\n";
-    //$body = $body .= "Content-type: text/html; charset=iso-8859-1\r\n";
-    
-    // envia o email
-    mail($destinatario, $assunto , $body, "From: $emaildoservidor\r\n");
-    
-}else{
-    $destinatario= $_SESSION["email"];
-    $nome = "Olá NOME_DO_USUARIO";
-    $emaildoservidor = "no-reply@antonystar.com";
-    $assunto="Segue o link para autenticação no sistema: https://2fatores.antonystar.com/controller/temp/$link.php?id=$id";
-    
-    $body = "===================================" . "\n";
-    $body = $body . "Autenticação de dois fatores" . "\n";
-    $body = $body . "===================================" . "\n\n";
-    $body = $body . "Nome: " . $nome . "\n";
-    $body = $body . "Assunto: " . $assunto . "\n";
-    
-    $body = $body . "===================================" . "\n";
-    //$body = $body .= "Content-type: text/html; charset=iso-8859-1\r\n";
-    
-    // envia o email
-    mail($destinatario, $assunto , $body, "From: $emaildoservidor\r\n");
-}
+</head>
 
-?>
+<body >
+<div onload="teste()">
+        asdadasdasd
+    </div>
+
+    <script>
+        function teste() {
+            document.getElementById("corpo").innerHTML = "Alterou o corpo?";
+        }
+
+    </script>
+
+    <button onclick=teste()>login</button>
+    <div id="corpo">
+    </div>
+   
+    <!-- coloco essa função no menu, onde monto somente um arquivo e menu.php e nele faço a separação por perfil -->
+</body>
+
+</html>
