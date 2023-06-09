@@ -1,6 +1,6 @@
 <?php
 //require '../../models/bancovalida.php';
-require '../../models/banco.php';
+require '../dao/conexao/banco.php';
 session_start();
 $id= $_GET["id"];
 $nome = rand(1000, 9999);

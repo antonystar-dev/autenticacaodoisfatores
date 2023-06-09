@@ -1,7 +1,7 @@
 <?php
 session_start();
 //require '../../../models/bancovalida.php';
-require '../../../models/banco.php';
+require '../../dao/conexao/banco.php';
 $id= $_GET["id"];
 //header("Refresh:3");
 $codigo = rand(100000, 999999);
@@ -13,7 +13,7 @@ $sql = "UPDATE usuarios SET cod_temp=md5($codigo) WHERE id=$id";
 
 if ($conn->query($sql) === TRUE) {
 
-  header("Refresh: 10;url=../../../models/expirado.php?id=$id");
+  header("Refresh: 10;url=../../models/expirado.php?id=$id");
 
 } else {
   echo "deu erro " . $conn->error;

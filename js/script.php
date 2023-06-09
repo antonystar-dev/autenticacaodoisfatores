@@ -30,7 +30,7 @@
         localStorage.setItem("estadoAtual", "4")
         document.getElementById("corpo").innerHTML = `
             <?php
-            require 'view/perfilativo.php';
+            require 'controller/perfilativo.php';
 
             ?>`;
     }
@@ -38,7 +38,7 @@
         localStorage.setItem("estadoAtual", "5")
         document.getElementById("corpo").innerHTML = `
         <?php
-        require 'view/perfilativo.php';
+        require 'controller/perfilativo.php';
         ?>`;
     }
 

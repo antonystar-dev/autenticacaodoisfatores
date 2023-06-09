@@ -16,11 +16,11 @@
         switch ($seçãoPerfilcol) {
             case "Administrador":
                 echo'<button onclick=pgAdmin() class="botao">Perfil</button>';
-                echo'<a href="./controller/sair.php"><button  class="botao">Sair</button></a>';
+                echo'<a href="./controller/logoffController.php"><button  class="botao">Sair</button></a>';
                 break;
             case "Usuario":
                 echo'<button onclick=pgUsuario() class="botao">Perfil</button>';
-                echo'<a href="./controller/sair.php"><button  class="botao">Sair</button></a>';
+                echo'<a href="./controller/logoffController.php"><button  class="botao">Sair</button></a>';
                 break;
                 default:
                 echo'<button class="botao" onclick=login()>Entrar</button>';

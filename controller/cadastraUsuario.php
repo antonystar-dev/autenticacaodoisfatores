@@ -1,45 +1,33 @@
 <?php
 
-require_once '../models/banco.php';
+require_once '../dto/usuarioDTO.php';
+require_once '../dao/usuarioDAO.php';
 
 $nome = $_POST["nome"];
-$email = $_POST["email"];
 $senha = $_POST["senha"];
 //$senha = md5($_POST["senha"]);
+$email = $_POST["email"];
+$perfil_id=2;
 
-echo $nome;
-echo $email;
-echo $senha;
-$perfilid=2;
-     
+
+$usuarioDTO = new UsuarioDTO();
+$usuarioDTO->setNome($nome);
+$usuarioDTO->setSenha($senha);
+$usuarioDTO->setEmail($email);
+$usuarioDTO->setPerfil_id($perfil_id);
+
+
+$usuarioDAO = new UsuarioDAO;
+$sucesso = $usuarioDAO->salvarUsuario($usuarioDTO);
+
+if ($sucesso) {
+    $msg = "Cadastrado com sucesso";
+    echo "<script>";
     
-    $validacao = true;
-    if (empty($nome)) {
-        $validacao = false;
-    }
-
-
-    if (empty($email)) {
-        $validacao = false;
-    }
-    if (empty($senha)) {
-        $validacao = false;
-    }
-
-   
-    //Inserindo no Banco:
-    if ($validacao) {
-        $pdo = Banco::conectar();
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "INSERT INTO usuarios (nome,senha,email,perfil_id) VALUES(?,?,?,?)";
-        $q = $pdo->prepare($sql);
-        $q->execute(array($nome, $senha, $email,$perfilid));
-        Banco::desconectar();
-        $msg = "Gravado com sucesso";
-          echo "<script>";
-          echo "window.location.href ='index.php?msg={$msg}';";
-          echo "</script> "; 
-    }
+    echo "window.location.href = '../?msg={$msg}';";
+    //echo "window.location.href = '../?msg={$msg}';";
+    echo "</script> ";
+}
 
 ?>
 

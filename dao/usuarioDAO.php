@@ -1,0 +1,92 @@
+<?php
+require_once 'conexao/banco.php';
+
+class UsuarioDAO
+{
+
+    public $pdo = null;
+
+    public function __construct()
+    {
+        $this->pdo = conexao::getInstance();
+    }
+
+    public function getAllUsuario()
+    {
+        try {
+            $sql = "SELECT id, nome, senha, email,perfil_id  from  usuarios Inner Join perfil  on usuarios.perfil_id = perfil.id";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $usuarios;
+        } catch (PDOException $exc) {
+            echo $exc->getMessage();
+        }
+    }
+
+    public function salvarUsuario(UsuarioDTO $usuarioDTO)
+    {
+        try {
+            $sql = "INSERT INTO usuarios(nome,senha,email,perfil_id) 
+                    VALUES (?,?,?,?)";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->bindValue(1, $usuarioDTO->getNome());
+            $stmt->bindValue(2, $usuarioDTO->getSenha());
+            $stmt->bindValue(3, $usuarioDTO->getEmail());
+            $stmt->bindValue(4, $usuarioDTO->getPerfil_id());
+
+            return $stmt->execute();
+        } catch (PDOException $exc) {
+            echo $exc->getMessage();
+        }
+    }
+
+    public function excluirUsuario($email)
+    {
+        try {
+            $sql = "DELETE FROM usuarios 
+                   WHERE email = ?";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->bindValue(1, $email);
+            $stmt->execute();
+        } catch (PDOException $exc) {
+            echo $exc->getMessage();
+        }
+    }
+
+    public function getUsuarioById($idusuario)
+    {
+        try {
+            $sql = "SELECT * FROM usuarios WHERE id = ?";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->bindValue(1, $idusuario);
+            $stmt->execute();
+            $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $usuario;
+        } catch (PDOException $exc) {
+            echo $exc->getMessage();
+        }
+    }
+
+    public function updateUsuarioById(UsuarioDTO $usuarioDTO)
+    {
+        try {
+            $sql = "UPDATE usuarios SET nome=?,
+                                       senha=?,
+                                       email=?,
+                                       perfil_id=?
+                                       WHERE id= ?";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->bindValue(1, $usuarioDTO->getNome());
+            $stmt->bindValue(2, $usuarioDTO->getSenha());
+            $stmt->bindValue(3, $usuarioDTO->getEmail());
+            $stmt->bindValue(4, $usuarioDTO->getPerfil_id());
+            $stmt->bindValue(5, $usuarioDTO->getId());
+            $stmt->execute();
+        } catch (PDOException $exc) {
+            echo $exc->getMessage();
+        }
+    }
+
+}
+?>

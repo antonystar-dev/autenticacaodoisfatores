@@ -84,7 +84,7 @@ input[type=submit]:hover {
 <body>
     <div class="codigo">
     <h1>Insira o codigo de verificação</h1>
-    <form method="post" action="../models/validacodigo.php">
+    <form method="post" action="../models/validaCodigo.php">
         <input type="text" name="codigo" placeholder="Digite o codigo"/><br/>
         <input type="submit" value="verificar"/>
 

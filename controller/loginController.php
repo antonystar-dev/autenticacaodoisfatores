@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../models/loginBD.php';
+require_once '../dao/loginDAO.php';
 
 $email = $_POST["email"];
 $senha = $_POST["senha"];
@@ -15,14 +15,14 @@ if (!empty($email)) {
     $_SESSION["perfilcol"] = $email["perfilcol"];
     $_SESSION["id"] = $email["id"];
      
-   require_once '../models/enviaemail.php';
+   require_once '../models/enviaEmail.php';
    header("Refresh: 1;url='../view/codigo.php");
    
 } else {
     $msg = "Usuário ou senha incorreto";
     
     echo $msg;
-    header("Refresh: 3;url='../view/index.html");
+    header("Refresh: 3;url='../");
     
     
 }

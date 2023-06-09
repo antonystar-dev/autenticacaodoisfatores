@@ -1,11 +1,8 @@
 <?php
 session_start();
-require './banco.php';
+require '../dao/conexao/banco.php';
 $id= $_SESSION["id"];
 $codigo = $_POST['codigo'];
-
-echo '<a href="index.html">Voltar para pg anterior</a>';
-
 
 $sql = "SELECT cod_temp FROM usuarios WHERE id=$id ";
 
@@ -18,14 +15,14 @@ if ($result->num_rows > 0) {
 
     if (md5($codigo) == $row ["cod_temp"]) {
      
-        echo "vc será redirecionado para pg correta";
-        header("Refresh: 1;url='../controller/redireciona.php");
+        
+        header("Refresh: 1;url='../controller/redirecionaUsuario.php");
         }elseif($codigo =="EXPIRADO"){
             echo "Código inválido";
-            header("Refresh: 1;url='../view/");
+            header("Refresh: 1;url='../");
         }else{
           echo "Código inválido";
-          header("Refresh: 1;url='../view/");
+          header("Refresh: 1;url='../");
         }
     
   }

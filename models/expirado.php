@@ -1,6 +1,6 @@
 <?php
 
-require './banco.php';
+require '../dao/conexao/banco.php';
 $id= $_GET["id"];
 $sql = "SELECT cod_temp, dir_temp FROM usuarios WHERE id=$id";
 $result = $conn->query($sql);
@@ -10,8 +10,8 @@ if ($result->num_rows > 0) {
      $dirtemp=$row["dir_temp"];
 
    if($dirtemp!="EXPIRADO"){
-    unlink("../controller/temp/$dirtemp/$dirtemp.php");
-    rmdir("../controller/temp/$dirtemp/");
+    unlink("../temp/$dirtemp/$dirtemp.php");
+    rmdir("../temp/$dirtemp/");
   }
     
     

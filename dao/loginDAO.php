@@ -1,6 +1,6 @@
 <?php
 
-require_once 'banco.php';
+require_once 'conexao/banco.php';
 
 class LoginBD {
 
