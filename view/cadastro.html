@@ -1,3 +1,10 @@
 
-    <h1>aqui fica os dados de cadastro</h1>
+    <h1 class="titulo">Cadastrar</h1>
+    <form action="./controller/cadastra-controler.php" method="post" id="formCadastro">
+        <input type="text" name="nome" title="Preenche o campo nome" placeholder="Nome" id="nomeUsuario" required />
+        <input type="email" title="digite o email corretamente" name="email" placeholder="email" id="emailUsuario" required />
+        <input type="password" title="digite a senha" name="senha" placeholder="Senha" id="senhaUsuario"  required/>
+        <input type="password" title="confirme a senha" name="confSenha" placeholder="Confirmar a senha" id="confirmarSenha"require /><br>
+        <input type="submit" value="Cadastrar"/>
+    </form>
     <input type="button" value="Cancelar"  onclick="paginaInicial()"/>

@@ -74,4 +74,29 @@
         localStorage.setItem("estadoAtual", "0");
     }
 
+
+
+
+
+
+    function validarSenha() {
+        
+        senha = formCadastro.senhaUsuario.value;
+        confSenha = formCadastro.confirmarSenha.value;
+
+      /*   if (nome == "") {
+            alert('Digite o campo com seu nome');
+            nomeUsuario.focus();
+
+            return false;
+        } */
+        if (senha != confSenha) {
+            alert('As senhas digitadas não coincidem');
+            formCadastro.senhaUsuario.focus();
+
+            return false;
+        }
+
+    };
+
 </script>
