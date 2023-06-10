@@ -8,12 +8,15 @@
     <link rel='stylesheet' type='text/css' media='screen' href='./css/main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/login.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/esqueciSenha.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/footer.css'>
     <style>
         body {
             margin: 0;
             padding: 0;
             border: 0;
-            
+            display:flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
     </style>
     <script src="./js/ocultamenu.js"></script>
@@ -24,3 +27,4 @@
 </head>
 
 <body onload="estadoAtual()">
+<main>

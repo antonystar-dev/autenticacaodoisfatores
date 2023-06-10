@@ -1,0 +1,50 @@
+#rodape {
+    padding: 20px;
+    background: #4C4A62;
+    display: table;
+    display: table-row;
+    display: table-cell;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.divisoes {
+    /* background-color: aqua; */
+    width: 100vw;
+    display: table;
+    display: table-cell;
+    padding: 0 10px;
+}
+
+.subdivisoes {
+    /* background-color: blueviolet; */
+
+}
+
+.subdivisoes a {
+    /* background-color: blueviolet; */
+    color: white;
+}
+
+.copyrightDiv {
+   /*  background-color: blue; */
+    font-size: 20px;
+    display: table;
+}
+
+.copyrightDiv-Divisoes {
+    /* background-color: brown; */
+    width: 100vw;
+    display: table;
+    display: table-cell;
+    text-align: center;
+}
+
+.posicaoGeral {
+   /*  background-color: red; */
+    width: 100%;
+}
+
+.divisoes .posicaoGeral .copyrightDiv {
+    display: table-row;
+}
