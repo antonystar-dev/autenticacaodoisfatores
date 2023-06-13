@@ -19,10 +19,14 @@ if (!empty($email)) {
    header("Refresh: 1;url='../view/codigo.php");
    
 } else {
-    $msg = "Usuário ou senha incorreto";
     
-    echo $msg;
-    header("Refresh: 3;url='../");
+    
+    $msg = "Usuario ou senha incorreto";
+    //setcookie('mensagem',$msg);
+    echo "<script>localStorage.setItem('mensagemNegativa', '$msg');</script>";
+    
+    //echo $msg;
+    header("Refresh: 0;url='../");
     
     
 }

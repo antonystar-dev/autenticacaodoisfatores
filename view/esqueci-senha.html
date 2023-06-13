@@ -1,132 +1,22 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esqueci a senha</title>
-
-    <style>
-        body {
-            background-color: #CFD8DC;
-            font-family: Arial, Helvetica, sans-serif;
-            text-transform: uppercase;
-            text-align: center;
-
-        }
-
-        h1 {
-            color: white;
-            font-weight: bold;
-            padding: 50px auto;
-        }
-
-        h2 {
-            color: white;
-            font-weight: bold;
-            padding: 30px auto;
-        }
-
-        p {
-            color: red;
-        }
-
-        .codigo {
-            background-color: #4C4A62;
-            margin: 160px auto 100px auto;
-            width: 60%;
-            padding: 20px 20px;
-            border-radius: 10px;
-            height: 400px;
-        }
-
-        input[type=text] {
-            width: 40%;
-            padding: 12px 15px;
-            margin: 25px 4px;
-            display: inline-block;
-            border: 0px;
-            border-radius: 4px;
-            font-size: large;
-            text-decoration: white;
-            background-color: #CFD8DC;
-
-
-        }
-
-        input[type=text]:hover {
-            border: 0px;
-            background-color: white;
-        }
-
-
-        ::placeholder {
-            color: #4C4A62;
-        }
-
-        input[type=submit] {
-            width: 40%;
-            background-color: #08fa81;
-            color: #4C4A62;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            text-transform: uppercase;
-        }
-
-        input[type=submit]:hover {
-            background-color: #33c27a;
-        }
-
-        span {
-            color: white;
-            padding: 30px auto;
-        }
-
-        a {
-
-
-            color: white;
-            padding: 14px 10px;
-            margin: 8px 0;
-            border: none;
-            text-transform: uppercase;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: white;
-        }
-    </style>
-</head>
-
-<body> -->
-    <div class="geral">
+<div class="geral">
     <div class="codigo">
         <h2 class="tituloAlerta">Esqueci minha senha</h2>
         <hr />
 
-        <form action="esqueci" method="post" id="form-rec-senha">
+        <form action="./controller/esqueciSenha.php" method="post" id="form-rec-senha">
             <div class="campoform">
-                <input type="text" name="email" placeholder=" e-m@il.com" class="campoEmail"/>
+                <input type="email" name="email" placeholder=" e-m@il.com" class="campoEmail" />
             </div>
-
-            <div class="campoform">
-                <br />
-
-                <button type="submit" class="botaoCarregar">Recuperar minha senha</button><br />
-                <button type="button" class="botaoCarregar" onclick="paginaInicial()">Cancelar</button>
-                
-
-                <span class="spanEsqueciSenha">Não tem conta? <a href="#"onclick=cadastrar() class="facaCadastro">Faça seu cadastro</a></span>
+            <h4 style="color: white;">Digite o email utilizado para o envio da nova senha:</h4>
+            <div class="campoBotoesEsqSenhaGeral">
+                <div class="campoBotoesEsqSenha">
+                    <button type="submit" class="botaoCarregar">Enviar</button>
+                    <button type="button" class="botaoCancelar" onclick="paginaInicial()">Cancelar</button>
+                </div>
             </div>
+            <span class="spanEsqueciSenha">
+                Não tem conta? <a href="#" onclick=cadastrar() class="facaCadastro">Faça seu cadastro</a>
+            </span>
         </form>
     </div>
-    </div>
-
-<!-- </body>
-
-</html> -->
+</div>

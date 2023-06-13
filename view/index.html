@@ -1,26 +1,26 @@
+<div class="img">
+    <div class="lateral">
+        <div class="login">
+            <label class="nomelogo">Login</label>
+            <form action="./controller/loginController.php" method="post" id="formlogin">
+                <div class="campoform">
+                    <input type="text" name="email" placeholder=" e-m@il.com" />
+                </div>
+                <div class="campoform">
+                    <input type="password" name="senha" placeholder="senha" />
+                </div>
+                <div class="campoform">
+                    <br />
+                    <a href="#" onclick=esqueciSenha(),ocultaMenu()>Esqueci a senha</a><br>
+                    <div>
+                        <input type="submit" value="Entrar" class="botaoEntrar" />
+                        <input type="button" value="Cancelar" onclick="paginaInicial()" class="botaoCancelar" />
+                    </div>
+                    <br>
 
-    
-    <div class="img">
-        <div class="lateral">
-            <div class="login">
-                <label class="nomelogo">Login</label>
-                <form action="./controller/loginController.php" method="post" id="formlogin">
-                    <div class="campoform">
-                        <input type="text" name="email" placeholder=" e-m@il.com" />
-                    </div>
-                    <div class="campoform">
-                        <input type="password" name="senha" placeholder="senha" />
-                    </div>
-                    <div class="campoform">
-                        <br />
-                        <a href="#" onclick=esqueciSenha(),ocultaMenu()>Esqueci a senha</a>
-                        <input type="submit" value="Entrar" />
-                        <input type="button" value="Cancelar"  onclick="paginaInicial()"/>
-
-                        <span>Não tem conta? <a href="#" onclick=cadastrar(),ocultaMenu()>Faça seu cadastro</a></span>
-                    </div>
-                </form>
-            </div>
+                    <span>Não tem conta? <a href="#" onclick=cadastrar(),ocultaMenu()>Faça seu cadastro</a></span>
+                </div>
+            </form>
         </div>
     </div>
-    
+</div>

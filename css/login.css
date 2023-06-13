@@ -69,9 +69,9 @@ input[type=password]:hover{
     color: white;
 }
 
-input[type=submit] {
-    width: 100%;
-    background-color: #CFD8DC;
+.botaoEntrar{
+    width: 40%;
+    background-color: #08fa81;
     color: #4C4A62;
     padding: 14px 20px;
     margin: 8px 0;
@@ -81,7 +81,22 @@ input[type=submit] {
     text-transform: uppercase;
 }
 
-input[type=submit]:hover {
+.botaoEntrar:hover {
+    background-color: #CFD8DC;
+    background-color: #08fa81;
+}
+.botaoCancelar{
+    width: 40%;
+    background-color: #CFD8DC;
+    color: #4C4A62;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.botaoCancelar:hover {
     background-color: #CFD8DC;
 }
 

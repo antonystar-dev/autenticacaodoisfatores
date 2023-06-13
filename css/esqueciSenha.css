@@ -1,9 +1,9 @@
 .geral {
-background-color: #CFD8DC;
+/* background-color: #CFD8DC; */
 font-family: Arial, Helvetica, sans-serif;
 text-transform: uppercase;
 text-align: center;
-height: 1200px;
+
 
 }
 
@@ -29,22 +29,19 @@ margin: 160px auto 100px auto;
 width: 60%;
 padding: 20px 20px;
 border-radius: 10px;
-height: 400px;
+height: 500px;
 }
 
 .campoEmail{
-width: 40%;
-padding: 12px 15px;
-margin: 25px 4px;
+width: 100%;
+padding: 12px 2%;
 display: inline-block;
+margin: 9% 4%;
 border: 0px;
 border-radius: 4px;
 font-size: large;
 text-decoration: white;
 background-color: #CFD8DC;
-color:write;
-
-
 }
 
 .campoEmail:hover {
@@ -90,4 +87,14 @@ text-decoration: none;
 
 .facaCadastro:hover {
 color: white;
+}
+.campoBotoesEsqSenha {
+   /*  background-color: green;
+ */    background-position: center;
+    width: 50%;
+    margin: auto 25%;
+}
+.campoBotoesEsqSenhaGeral {
+    /* background-color: red;
+ */    
 }

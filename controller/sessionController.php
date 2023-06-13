@@ -21,6 +21,6 @@ if(isset( $_COOKIE[ $s_name ] )) {
 
     //echo "Session foi criada para $s_name.<br/>";
 } else {
-    echo "Seção expirada.<br/>";
+    //echo "Seção expirada.<br/>";
 }
 ?>

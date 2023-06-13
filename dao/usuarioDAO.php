@@ -14,7 +14,9 @@ class UsuarioDAO
     public function getAllUsuario()
     {
         try {
-            $sql = "SELECT id, nome, senha, email,perfil_id  from  usuarios Inner Join perfil  on usuarios.perfil_id = perfil.id";
+            //$sql = "SELECT id, nome, senha, email,perfil_id  from  usuarios Inner Join perfil  on usuarios.perfil_id = perfil.id";
+            $sql = "SELECT id, nome, senha, email,perfil_id  from  usuarios";
+            
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
             $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -54,12 +56,12 @@ class UsuarioDAO
         }
     }
 
-    public function getUsuarioById($idusuario)
+    public function getUsuarioById($id)
     {
         try {
             $sql = "SELECT * FROM usuarios WHERE id = ?";
             $stmt = $this->pdo->prepare($sql);
-            $stmt->bindValue(1, $idusuario);
+            $stmt->bindValue(1, $id);
             $stmt->execute();
             $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
             return $usuario;
