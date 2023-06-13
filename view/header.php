@@ -9,6 +9,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='./css/login.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/esqueciSenha.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/footer.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/cadastro.css'>
     <style>
         body {
             margin: 0;

@@ -23,7 +23,7 @@
 
 .login {
     /* background-color: red; */
-    padding: 250px 30px 30px 80px;
+    padding: 200px 30px 30px 80px;
 
 
 }
@@ -32,7 +32,7 @@
     text-transform: uppercase;
     font-weight: bold;
     font-size: 25px;
-
+    
 }
 
 .campoform {
@@ -41,7 +41,7 @@
     width: 90%;
 }
 
-input[type=text],[type=password] {
+.campoEntrar{
     width: 90%;
     padding: 12px 15px;
     margin: 4px;
@@ -50,19 +50,16 @@ input[type=text],[type=password] {
     border-radius: 4px;
     font-size: large;
     text-decoration: white;
-     background-color: transparent;
+     /* background-color: transparent; */
    
 
 }
 
-input[type=text]:hover {
+.campoEntrar:hover {
     border: 0px;
-    background-color: white;
+    background-color: rgb(223, 223, 223);
 }
-input[type=password]:hover{
-    border: 0px;
-    background-color: white;
-}
+
 
 
 ::placeholder {

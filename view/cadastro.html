@@ -1,10 +1,40 @@
+<div class="img">
+    <div class="lateral">
+        <div class="cadastro">
+            <div class="campoform">
+                <h1 class="nomelogo">Faça seu cadastro</h1>
+                <form action="./controller/cadastraUsuario.php" method="post" id="formCadastro">
+                    <label>Nome:</label>
+                    <input type="text" name="nome" id="nomeUsuario" class="inputCadastro" placeholder="Nome"
+                        title="Preenche o campo nome" required />
+                    <label>E-mail:</label>
+                    <input type="email" name="email" id="emailUsuario" class="inputCadastro" placeholder="email"
+                        title="digite o email corretamente" required />
+                    <div class="senhaDiv">
+                        <label>Senha:</label>
 
-    <h1 class="titulo">Cadastrar</h1>
-    <form action="./controller/cadastraUsuario.php" method="post" id="formCadastro">
-        <input type="text" name="nome" title="Preenche o campo nome" placeholder="Nome" id="nomeUsuario" required />
-        <input type="email" title="digite o email corretamente" name="email" placeholder="email" id="emailUsuario" required />
-        <input type="password" title="digite a senha" name="senha" placeholder="Senha" id="senhaUsuario"  required/>
-        <input type="password" title="confirme a senha" name="confSenha" placeholder="Confirmar a senha" id="confirmarSenha"require /><br>
-        <input type="submit" value="Cadastrar"/>
-    </form>
-    <input type="button" value="Cancelar"  onclick="paginaInicial()"/>
+                    </div>
+                    <div class="senhaDiv">
+
+                        <input type="password" name="senha" id="senhaUsuario" class="senhaCadastro" placeholder="Senha"
+                            title="digite a senha" required />
+                        <input type="password" name="confSenha" id="confirmarSenha" class="senhaCadastro"
+                            placeholder="Confirmar a senha" title="confirme a senha" require /><br>
+                    </div>
+                    <div>
+                        <br />
+
+                        <div>
+                            <input type="submit" value="Cadastrar" class="botaoEntrar" />
+                            <input type="button" value="Cancelar" onclick="paginaInicial()" class="botaoCancelar" />
+                        </div>
+                        <br>
+
+                        <span>Ja tem conta? <a href="#" onclick=login(),ocultaMenu()>Faça seu Login</a></span>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

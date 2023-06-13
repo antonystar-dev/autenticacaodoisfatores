@@ -18,7 +18,9 @@
         document.getElementById("corpo").innerHTML = `
             <?php
             require 'view/cadastro.html';
-            ?>`;
+            ?>`
+             ocultaMenu();
+            ;
     }
     function login() {
         localStorage.setItem("estadoAtual", "3")
@@ -110,8 +112,11 @@
     setTimeout(mensagemAlerta, 4000);
 
     function mensagemNeg() {
-        const mensagemExibida = localStorage.getItem("mensagemNegativa");
 
+        const mensagemExibida = localStorage.getItem("mensagemNegativa");
+        if (localStorage.getItem("mensagemNegativa") == " ") {
+            alert("olha o trem errado aq");
+        }
         document.getElementById("alertaNegativoID").innerHTML = '<div class="alertaNegativo">' + mensagemExibida + '</div>';
 
         if (localStorage.getItem("mensagemNegativa") == "vazio") {
@@ -130,7 +135,7 @@
         localStorage.setItem("mensagemPositiva", "vazio");
     }
 
-   
+
 
 
 
