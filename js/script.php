@@ -35,7 +35,7 @@
         localStorage.setItem("estadoAtual", "4")
         document.getElementById("corpo").innerHTML = `
             <?php
-            require 'controller/perfilativo.php';
+            require_once 'controller/perfilAtivo.php';
 
             ?>`;
     }
@@ -43,7 +43,7 @@
         localStorage.setItem("estadoAtual", "5")
         document.getElementById("corpo").innerHTML = `
         <?php
-        require 'controller/perfilativo.php';
+        require_once 'controller/perfilAtivo.php';
         ?>`;
     }
 
@@ -114,8 +114,8 @@
     function mensagemNeg() {
 
         const mensagemExibida = localStorage.getItem("mensagemNegativa");
-        if (localStorage.getItem("mensagemNegativa") == " ") {
-            alert("olha o trem errado aq");
+        if (localStorage.getItem("mensagemNegativa") == null) {
+            //alert("olha o trem errado aq");
         }
         document.getElementById("alertaNegativoID").innerHTML = '<div class="alertaNegativo">' + mensagemExibida + '</div>';
 
