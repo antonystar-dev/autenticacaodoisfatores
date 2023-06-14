@@ -15,7 +15,8 @@ if($servidor=="localhost"){
     $destinatario= $_SESSION["email"];
     $nome = "Olá NOME_DO_USUARIO";
     $emaildoservidor = "no-reply@antonystar.com";
-    $assunto="Segue o link para autenticação no sistema: http://localhost/doisfatores/temp/$link.php?id=$id";
+    $assunto="Segue o link para autenticação no sistema: http://localhost/doisfatores/temp/$link.php?id=$id segundo link http://192.168.135.132/doisfatores/temp/$link.php?id=$id";
+   
     
     $body = "===================================" . "\n";
     $body = $body . "Autenticação de dois fatores" . "\n";

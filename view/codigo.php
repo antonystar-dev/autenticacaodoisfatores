@@ -1,5 +1,5 @@
 <?php
- header("Refresh: 120;url=geralink.php");
+ //header("Refresh: 120;url=geralink.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
