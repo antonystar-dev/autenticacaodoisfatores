@@ -1,14 +1,17 @@
 ------Coisas que tenho que corrigir no sistema------
-1 Implementação do session para remover o metodo $_GET
-2 criar alguma naneira de expirar a seção se a caso o usuario não digitar o codigo
+<!-- 1 Implementação do session para remover o metodo $_GET
+OBS: manter o _GET, mas usar o id da seção onde ele será enviado para o banco e depos enviado para o email. -->
+<!-- 2 criar alguma naneira de expirar a seção se a caso o usuario não digitar o codigo
 OBS: Depois da nova organização de diretorios o loguin não expira nessa parte.
-3 Correção do link do email que não expira;
+OBS2: Posso criar um id(Logado) que fica assim no banco depois q passa pelo codigo certo, se não tiver essa informação sera 
+redirecionado para a pg de login e expira a seção.  -->
+<!-- 3 Correção do link do email que não expira; -->
 4 Formatação do email enviado para o usuario
 4.1 Email com o link do codigo
 4.2 Email com o link do esqueci a senha
 4.3 Email com o link da confirmação de criação de conta.
 5 Arrumar o <head> com a informações corretas e codigo(ico tbm).
-6 Passar o nome do usuario da session(models/enviaEmail.php)
+<!-- 6 Passar o nome do usuario da session(models/enviaEmail.php) -->
 7 Dividir o arquivo (models/expirado.php) em 3.
 7.1 colocar no view.
 7.2 Separar o css dele
@@ -28,7 +31,8 @@ OBS: não tem necessidade de fazer de fato, ja que o foco do sistema não é ess
 OBS: manter o php junto visto que o arquivo é temporario.
 15 Colocar mensagem de quando a seção expira.
 15.1 Vai aparecer a mgs quando abrir o sistema, para isso posso fazer a validação igual a da mgs de alerta
-OBS: verificar se essa função ja vai se aplicar a situação
+OBS: verificar se essa função ja vai se aplicar a situação 
+16 Colocar o /DAO/DTO dentro da /models
 
 ------Implementação futura-----
 1 Separação dos arquivos PHP em funções (atualização de codigo)

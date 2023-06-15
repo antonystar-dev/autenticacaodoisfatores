@@ -2,7 +2,7 @@
 
 require '../dao/conexao/banco.php';
 $id= $_GET["id"];
-$sql = "SELECT cod_temp, dir_temp FROM usuarios WHERE id=$id";
+$sql = "SELECT cod_temp, dir_temp FROM usuarios WHERE link_temp='$id'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
@@ -19,7 +19,7 @@ if ($result->num_rows > 0) {
 } else {
   echo "não carregou";
 }
-$sql = "UPDATE usuarios SET cod_temp='EXPIRADO', dir_temp='EXPIRADO' WHERE id=$id";
+$sql = "UPDATE usuarios SET cod_temp='EXPIRADO', dir_temp='EXPIRADO' WHERE link_temp='$id'";
 
 if ($conn->query($sql) === TRUE) {
   //echo "Código Expirado";

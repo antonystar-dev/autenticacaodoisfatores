@@ -15,7 +15,15 @@ if ($result->num_rows > 0) {
 
     if (md5($codigo) == $row ["cod_temp"]) {
      
-        
+        //aqui fica a função q envia (Logado) no banco.
+        $SessaoID = "UPDATE usuarios SET link_temp='LOGADO' WHERE id=$id ";
+        if ($conn->query($SessaoID) === TRUE) {
+          //echo "enviou";
+      } else {
+          echo "não enviou";
+          
+      }
+
         header("Refresh: 1;url='../controller/redirecionaUsuario.php");
         }elseif($codigo =="EXPIRADO"){
             echo "Código inválido";
@@ -23,6 +31,7 @@ if ($result->num_rows > 0) {
         }else{
           echo "Código inválido";
           header("Refresh: 1;url='../");
+          session_destroy();
         }
     
   }

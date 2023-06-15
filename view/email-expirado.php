@@ -1,29 +1,4 @@
-<?php
-session_start();
-//require '../../../models/bancovalida.php';
-require '../../dao/conexao/banco.php';
-$id= $_GET["id"];
-//header("Refresh:3");
-$codigo = rand(100000, 999999);
 
-
-
-
-$sql = "UPDATE usuarios SET cod_temp=md5($codigo) WHERE link_temp='$id'";
-
-if ($conn->query($sql) === TRUE) {
-
-  header("Refresh: 10;url=../../models/expirado.php?id=$id");
-
-} else {
-  echo "deu erro " . $conn->error;
-}
-
-
-
-$conn->close();
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,17 +41,13 @@ h2    {
   <div class="codigo">
     <h2>Codigo de verificação</h2>
     <hr/>
-    <h1><?php echo $codigo;?></h1>
+    <h1>email expirado</h1>
     
   </div>
-  <p>Use o codigo acima para realizar a validação do login no sistema</p>
+  <p>Para gerar um novo código, será necessario entrar novamente no sistema e acessar o novo link no email</p>
  
 </body>
 </html>
     
-
-
-
-
 
 

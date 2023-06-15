@@ -43,7 +43,7 @@ if (empty($email)) {
     
     $msg = "Email enviado com sucesso.";
     echo "<script>localStorage.setItem('mensagemPositiva', '$msg');</script>";
-    header("Refresh: 0;url='../'");
+    header("Refresh: 0;url=''");
 
 }
 
