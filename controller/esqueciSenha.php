@@ -1,5 +1,5 @@
 <?php
-require_once '../dao/usuarioDAO.php';
+require_once '../models/usuarioDAO.php';
 
 
 $usuarioDAO = new UsuarioDAO();

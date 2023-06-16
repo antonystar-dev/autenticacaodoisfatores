@@ -18,10 +18,10 @@ if (!isset($_SESSION["email"])) {
 }
 
 
-if (is_file('../dao/conexao/banco.php')) {
-    require_once '../dao/conexao/banco.php';
+if (is_file('../models/conexao/banco.php')) {
+    require_once '../models/conexao/banco.php';
 } else {
-    require_once './dao/conexao/banco.php';
+    require_once './models/conexao/banco.php';
 }
 
 

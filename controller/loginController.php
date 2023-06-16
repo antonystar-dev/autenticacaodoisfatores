@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../dao/loginDAO.php';
+require_once '../models/loginDAO.php';
 
 $email = $_POST["email"];
 $senha = $_POST["senha"];

@@ -1,5 +1,5 @@
 <?php
-require_once '../dao/conexao/banco.php';
+require_once '../models/conexao/banco.php';
 session_start();
 $verifica = $_SESSION["id"];
 $sql = "SELECT link_temp FROM usuarios WHERE id=$verifica ";

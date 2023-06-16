@@ -1,7 +1,7 @@
 <?php
 
-require_once '../dto/usuarioDTO.php';
-require_once '../dao/usuarioDAO.php';
+require_once '../models/usuarioDTO.php';
+require_once '../models/usuarioDAO.php';
 
 $nome = $_POST["nome"];
 $senha = $_POST["senha"];
