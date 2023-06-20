@@ -20,9 +20,9 @@ $s_name = session_name();
 // Verifique se a sessão existe ou não
 if(isset( $_COOKIE[ $s_name ] )) {
     setcookie( $s_name, $_COOKIE[ $s_name ], time() + $timeout, '/' );
-    echo date('H:i:s');
-    echo "Session foi criada para $s_name.<br/>";
-    echo session_id();
+    //echo date('H:i:s');
+    //echo "Session foi criada para $s_name.<br/>";
+   // echo session_id();
 } else {
     $msg = "Seção expirada.";
     echo "<script>localStorage.setItem('mensagemNegativa', '$msg');

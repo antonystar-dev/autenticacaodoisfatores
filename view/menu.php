@@ -33,12 +33,12 @@
        
     </div>
 </div>
-<!-- <div>
+<!--  <div>
     <h2>Menu extra desenvolvimento</h2>
     <button onclick=mensagemAlerta()>Teste de cookie</button>
-
-</div>
- -->
+<a href="./controller/trocaSenha.php">Troca senha</a>
+</div> -->
+ 
 <div id="alertaPositivoID">
     
 </div>

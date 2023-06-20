@@ -1,5 +1,6 @@
 <?php
 require_once '../models/usuarioDAO.php';
+require_once '../models/functions.php';
 
 
 $usuarioDAO = new UsuarioDAO();
@@ -10,40 +11,34 @@ $email = $_POST['email'];
 
 
 if (empty($email)) {
-    
     $msg = "Digite o email para o recebimento da nova senha";
-    echo "<script>localStorage.setItem('mensagemNegativa', '$msg');</script>";
-    header("Refresh: 0;url='../'");
+    alertaNegativo();
 } else {
     foreach ($usuarios as $u) {
 
         if ($email == $u["email"]) {
-            //echo $u["email"];
-            
-            $destinatario = $email;
-            $nome = "Olá NOME_DO_USUARIO";
-            $emaildoservidor = "no-reply@antonystar.com";
-            $assunto = "Reset de senha";
+            session_start();
+            //aqui eu chamo a função de geralção de link aleatorio;
+            $emailRecuperacao = $email;
+            $original = "../session/novaSenha.php";
 
-            $body = "===================================" . "\n";
-            $body = $body . "Prezado(a), segue o link para o reset da senha:" . "\n";
-            $body = $body . "===================================" . "\n\n";
-            $body = $body . "LINK DO RESET DA SENHA\n";
+            linkTemporario();
 
 
-            $body = $body . "===================================" . "\n";
-            //$body = $body .= "Content-type: text/html; charset=iso-8859-1\r\n";
+            $servidor = $_SERVER['SERVER_NAME'];
+            $mensagemAssunto = "Reset de senha";
+            $id2 = session_id();
+            $mensagemEmail = "Segue o link para a criação da nova senha em: http://$servidor/doisfatores/temp/$link.php?id=$id2";
+            enviaEmail();
 
-            // envia o email
-            mail($destinatario, $assunto, $body, "From: $emaildoservidor\r\n");
-            
         }
-        
+
     }
-    
+
     $msg = "Email enviado com sucesso.";
-    echo "<script>localStorage.setItem('mensagemPositiva', '$msg');</script>";
-    header("Refresh: 0;url=''");
+    alertaPositivo();
+    header("Refresh: 0;url='../");
+
 
 }
 

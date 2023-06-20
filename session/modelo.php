@@ -1,7 +1,7 @@
 <?php
 session_start();
 //require '../../../models/bancovalida.php';
-require '../../dao/conexao/banco.php';
+require '../../models/conexao/banco.php';
 $id= $_GET["id"];
 //header("Refresh:3");
 $codigo = rand(100000, 999999);

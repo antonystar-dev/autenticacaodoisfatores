@@ -1,6 +1,6 @@
 <?php
 
-require '../dao/conexao/banco.php';
+require './conexao/banco.php';
 $id= $_GET["id"];
 $sql = "SELECT cod_temp, dir_temp FROM usuarios WHERE link_temp='$id'";
 $result = $conn->query($sql);

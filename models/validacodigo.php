@@ -1,6 +1,6 @@
 <?php
 session_start();
-require '../dao/conexao/banco.php';
+require './conexao/banco.php';
 $id= $_SESSION["id"];
 $codigo = $_POST['codigo'];
 

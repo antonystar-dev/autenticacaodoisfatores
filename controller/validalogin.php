@@ -1,4 +1,10 @@
-<?php
+<?php 
+
+if (is_file('./models/functions.php')) {
+    require './models/functions.php';
+} else {
+    require '../models/functions.php';
+}
 if (!isset($_SESSION["email"])) {
 
     //header("Refresh: 0;url=");
