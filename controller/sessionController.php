@@ -1,8 +1,8 @@
 <?php
 
 //Defina o tempo limite da sessão por 2 segundos
-//$timeout = 600;
-$timeout = 60;
+$timeout = 600;
+//$timeout = 6;
 
 
 // Defina o máximo de tempo da sessão
@@ -24,10 +24,10 @@ if(isset( $_COOKIE[ $s_name ] )) {
     //echo "Session foi criada para $s_name.<br/>";
    // echo session_id();
 } else {
-    $msg = "Seção expirada.";
+    /* $msg = "Seção expirada.";
     echo "<script>localStorage.setItem('mensagemNegativa', '$msg');
     window.location.reload(true);
-    </script>";
+    </script>"; */
    
 }
 ?>

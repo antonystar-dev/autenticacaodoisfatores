@@ -1,7 +1,7 @@
 <script type="text/javascript">
     function paginaInicial() {
         localStorage.setItem("estadoAtual", "0")
-
+       
         window.location.reload(true);
 
     }
@@ -70,7 +70,11 @@
                 pgUsuario();
                 break;
             default:
-            //resetaEstado()
+            document.getElementById("corpo").innerHTML = `
+            <?php
+            require_once 'view/inicio.html';
+
+            ?>`;
 
         }
         mensagemAlerta();
@@ -80,25 +84,7 @@
         localStorage.setItem("estadoAtual", "0");
     }
 
-    function validarSenha() {
-
-        senha = formCadastro.senhaUsuario.value;
-        confSenha = formCadastro.confirmarSenha.value;
-
-        /*   if (nome == "") {
-              alert('Digite o campo com seu nome');
-              nomeUsuario.focus();
-  
-              return false;
-          } */
-        if (senha != confSenha) {
-            alert('As senhas digitadas não coincidem');
-            formCadastro.senhaUsuario.focus();
-
-            return false;
-        }
-
-    };
+    
 
 
 

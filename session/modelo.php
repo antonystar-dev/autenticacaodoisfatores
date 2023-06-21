@@ -13,7 +13,7 @@ $sql = "UPDATE usuarios SET cod_temp=md5($codigo) WHERE link_temp='$id'";
 
 if ($conn->query($sql) === TRUE) {
 
-  header("Refresh: 10;url=../../models/expirado.php?id=$id");
+  header("Refresh: 10;url=../../view/expirado.php?id=$id");
 
 } else {
   echo "deu erro " . $conn->error;
