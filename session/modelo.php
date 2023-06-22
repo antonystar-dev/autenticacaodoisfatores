@@ -1,9 +1,7 @@
 <?php
 session_start();
-//require '../../../models/bancovalida.php';
 require '../../models/conexao/banco.php';
 $id= $_GET["id"];
-//header("Refresh:3");
 $codigo = rand(100000, 999999);
 
 
@@ -30,7 +28,7 @@ $conn->close();
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
+  <!-- <style>
 body {
   background-color: #CFD8DC;
   font-family: Arial, Helvetica, sans-serif;
@@ -59,7 +57,7 @@ h2    {
   border-radius: 10px;
   height: 400px;
 }
-</style>
+</style> -->
   <title>Gera Codigo</title>
 </head>
 <body>

@@ -15,6 +15,7 @@ if (!empty($email)) {
     $_SESSION["perfilcol"] = $email["perfilcol"];
     $_SESSION["id"] = $email["id"];
     $_SESSION["nome"] = $email["nome"];
+    $_SESSION["situacao"] = $email["situacao"];
      
    require_once '../models/enviaEmail.php';
    header("Refresh: 1;url='../view/codigo.php");

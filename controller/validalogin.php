@@ -18,10 +18,8 @@ if (!isset($_SESSION["email"])) {
     }
     
     </script>";
-
-
-
 }
+
 
 
 if (is_file('../models/conexao/banco.php')) {
@@ -40,20 +38,14 @@ if (!empty($_SESSION["id"])) {
         while ($row = $result->fetch_assoc()) {
 
             if ($row["link_temp"] != "LOGADO") {
-                echo "logof";
+                //echo "logof";
                 session_destroy();
                 $SessaoID = "UPDATE usuarios SET link_temp='DESLOGADO' WHERE id=$verifica ";
                 if ($conn->query($SessaoID) === TRUE) {
                     //echo "enviou";
                 }
-
-
-
             }
-
         }
     }
 }
-
-
 ?>

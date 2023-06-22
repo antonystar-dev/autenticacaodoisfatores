@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Verificação</title>
-  <style>
+ <!--  <style>
     body {
       background-color: #CFD8DC;
       font-family: Arial, Helvetica, sans-serif;
@@ -79,7 +79,7 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #33c27a;
 }
-    </style>
+    </style> -->
 </head>
 <body>
     <div class="codigo">

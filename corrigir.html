@@ -1,4 +1,43 @@
 ------Coisas que tenho que corrigir no sistema------
+
+4 Formatação do email enviado para o usuario
+    //4.1 Email com o link do codigo
+    //4.2 Email com o link do esqueci a senha
+    4.3 Email com o link da confirmação de criação de conta.
+5 Arrumar o <head> com a informações corretas e codigo(ico tbm).
+7 Dividir o arquivo (models/expirado.php) em 3.
+    //7.1 colocar no view.
+    7.2 Separar o css dele
+    7.3 criar a função no /models
+8 Criptografar a senha.
+11 Separar o css da pg (view/codigo.php)
+12 Excluir os arquivos jogados sem utilização.
+    12.1 controller/alterarUsuario.php
+    12.2 view/mensagemAlerta.php
+13 Remover os comentarios desnecessarios.
+14 session/modelo.php
+    14.1 colocar o PHP em função
+    14.2 Separar o css do arquivo
+17 Arrumar a responsividade do site.
+18 controller/loginController.php colocar a função da mensagem negativa
+19 Procurar o conflito de CSS que está apresentando no site;
+20 Fazer a validação da senha no view/cadastro.html
+21 session/novaSenha.php 
+    21.1 colocar o PHP em função
+    21.2 Separar o css do arquivo
+22 criar a ponte do models/function com o controller
+23 Separar o css da pg (view/email-expirado.php)
+24 view/login-inativo.php
+    24.1 colocar o php em function
+    24.2 terminar a logica e Formatação
+
+
+
+------Implementação futura-----
+1 Separação dos arquivos PHP em funções (atualização de codigo)
+2 Criar a opção de pedir confirmação de email quando o usuario se cadastra.
+
+------Coisas que foram corrigidas no sistema------
 <!-- 1 Implementação do session para remover o metodo $_GET
 OBS: manter o _GET, mas usar o id da seção onde ele será enviado para o banco e depos enviado para o email. -->
 <!-- 2 criar alguma naneira de expirar a seção se a caso o usuario não digitar o codigo
@@ -6,17 +45,7 @@ OBS: Depois da nova organização de diretorios o loguin não expira nessa parte
 OBS2: Posso criar um id(Logado) que fica assim no banco depois q passa pelo codigo certo, se não tiver essa informação sera 
 redirecionado para a pg de login e expira a seção.  -->
 <!-- 3 Correção do link do email que não expira; -->
-4 Formatação do email enviado para o usuario
-    4.1 Email com o link do codigo
-    4.2 Email com o link do esqueci a senha
-    4.3 Email com o link da confirmação de criação de conta.
-5 Arrumar o <head> com a informações corretas e codigo(ico tbm).
 <!-- 6 Passar o nome do usuario da session(models/enviaEmail.php) -->
-<!-- 7 Dividir o arquivo (models/expirado.php) em 3.
-    7.1 colocar no view. -->
-    7.2 Separar o css dele
-    7.3 criar a função no /models
-8 Criptografar a senha.
 <!-- 9 Dividir o arquivo (raiz/index.php) em 2.
     9.1 Tirar o conteudo e deixar em branco por conta do carregamento.
     9.2 Colocar o conteudo em um arquivo separado (v se é possivel criar a pagina toda(contatos, sobre ...) em um so arquivo)
@@ -24,18 +53,8 @@ OBS: não tem necessidade de fazer de fato, ja que o foco do sistema não é ess
 <!-- 10 Corrigir a validação da senha.
     10.1 Verificar se as senhas são iguais.
     10.2 Verificar se a senha é facil. -->
-11 Separar o css da pg (view/codigo.php)
-12 Excluir os arquivos jogados sem utilização.
-13 Remover os comentarios desnecessarios.
-14 Separar o css do arquivo (session/modelo.php)
-OBS: manter o php junto visto que o arquivo é temporario.
-<!-- 15 Colocar mensagem de quando a seção expira.
+    <!-- 15 Colocar mensagem de quando a seção expira.
     15.1 Vai aparecer a mgs quando abrir o sistema, para isso posso fazer a validação igual a da mgs de alerta
 OBS: verificar se essa função ja vai se aplicar a situação  -->
 <!-- 16 Colocar o /DAO/DTO dentro da /models -->
-17 Arrumar a responsividade do site.
-18 Arrumar a alteração de senha com id em branco
-
-------Implementação futura-----
-1 Separação dos arquivos PHP em funções (atualização de codigo)
-2 Criar a opção de pedir confirmação de email quando o usuario se cadastra.
+<!-- 18 Arrumar a alteração de senha com id em branco -->

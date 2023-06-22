@@ -1,8 +1,3 @@
-<?php
-
-
-?>
-
 
 <div>
     <h1>Pagina do Usuario</h1>

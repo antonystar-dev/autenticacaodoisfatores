@@ -1,0 +1,170 @@
+.inputCadastro {
+    width: 100%;
+    padding: 12px;
+    /*   display: inline-block; */
+    margin: 10px 0;
+
+    border: 0px;
+    border-radius: 4px;
+    font-size: large;
+    /* text-decoration: white; */
+
+}
+
+.inputCadastro:hover {
+    border: 0px;
+    background-color: rgb(223, 223, 223);
+}
+
+.senhaCadastro {
+    width: 43%;
+    padding: 12px;
+    /*   display: inline-block; */
+    margin: 10px 0;
+    border: 0px;
+    border-radius: 4px;
+    font-size: large;
+    /* text-decoration: white; */
+
+}
+
+.senhaCadastro:hover {
+    border: 0px;
+    background-color: rgb(223, 223, 223);
+}
+
+.campoEmail {
+    width: 100%;
+    padding: 12px 2%;
+    display: inline-block;
+    margin: 9% 4%;
+    border: 0px;
+    border-radius: 4px;
+    font-size: large;
+    text-decoration: white;
+    background-color: #CFD8DC;
+}
+
+.campoEmail:hover {
+    border: 0px;
+    background-color: white;
+}
+
+
+::placeholder {
+    color: #4C4A62;
+
+}
+
+.botaoCarregar {
+    width: 40%;
+    background-color: #08fa81;
+    color: #4C4A62;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.botaoCarregar:hover {
+    background-color: #33c27a;
+}
+
+.campoBotoesEsqSenha {
+    /*  background-color: green;
+      */
+    background-position: center;
+    width: 50%;
+    margin: auto 25%;
+}
+
+.img {
+    background-image: url("../img/logo.ico"), url("../img/fundo.jpg");
+    background-position: 80%;
+
+    background-repeat: no-repeat;
+    /* height: 1200px; */
+    width: 100vw;
+    height: 100vh;
+    /* background-color:#4C4A62; */
+    background-color: rgba(76, 74, 98, 0.7);
+
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.campoform {
+    /* background-color: green; */
+    background-position: center;
+    width: 90%;
+}
+
+.campoEntrar {
+    width: 90%;
+    padding: 12px 15px;
+    margin: 4px;
+    display: inline-block;
+    border: 0px;
+    border-radius: 4px;
+    font-size: large;
+    text-decoration: white;
+    /* background-color: transparent; */
+
+
+}
+
+.campoEntrar:hover {
+    border: 0px;
+    background-color: rgb(223, 223, 223);
+}
+
+
+
+::placeholder {
+    color: white;
+}
+
+.botaoEntrar {
+    width: 40%;
+    background-color: #08fa81;
+    color: #4C4A62;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.botaoEntrar:hover {
+    background-color: #CFD8DC;
+    background-color: #08fa81;
+}
+
+.botaoCancelar {
+    width: 40%;
+    background-color: #CFD8DC;
+    color: #4C4A62;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.botaoCancelar:hover {
+    background-color: #CFD8DC;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: rgb(206, 205, 202);
+    text-decoration: none;
+}
+

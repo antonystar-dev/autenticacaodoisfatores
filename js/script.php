@@ -26,7 +26,7 @@
         localStorage.setItem("estadoAtual", "3")
         document.getElementById("corpo").innerHTML = `
             <?php
-            require 'view/index.html';
+            require 'view/login.html';
             ?>`
         ocultaMenu();
         ;
