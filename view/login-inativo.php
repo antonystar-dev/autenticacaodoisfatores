@@ -1,30 +1,46 @@
 <?php
-
-
-switch ($situacaoPerfil) {
-    case "4":
-        $situação = "Conta desabilitada temporariamente";
-        $emailconf="Reativar";
-        break;
-    case "2":
-        $situação = "Conta excluida a pedido do usuario";
-        $emailconf="Saiba mais";
-        break;
-    case "3":
-        $situação = "Conta excluida por suspeita de golpe";
-        $emailconf="Saiba mais";
-        break;
-    default:
-        $situação = "confirmar a criação da conta";
-        $emailconf= "Reenviar email";
+ session_start();
+if (is_file('./controller/ponte.php')) {
+    require_once './controller/ponte.php';
+} else {
+    require_once '../controller/ponte.php';
 }
+situacaoLogin();
+bloqueiosPerfil();
+
+if ($situacaoPerfil == "1") {
+    echo "<script>
+    window.location.replace('../');
+    </script>";
+} 
 ?>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação</title>
+    <?php
+    include '../css/linkCSS.php';
+    ?>
 
-<div class="codigo">
-    <h1 class="titulo">Situação do cadastro</h1>
-    <hr />
-    <h1><?php echo $situação; ?></h1>
-    <h2><?php echo $emailconf; ?></h2>
+</head>
 
-</div>
+<body class="bodyIndividual">
+
+    <div class="codigo">
+        <h1 class="tituloAlerta">Situação do cadastro</h1>
+        <hr />
+        <h2 class="tituloAlertaCodigo">
+            <?php echo $situacao ?? null; ?>
+        </h2>
+        <h2 class="tituloAlertaCodigo">
+            <?php echo $emailconf ?? null; ?>
+        </h2>
+
+    </div>
+</body>
+
+</html>

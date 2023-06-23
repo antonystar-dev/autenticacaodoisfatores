@@ -1,5 +1,9 @@
 <?php
-require_once '../models/conexao/banco.php';
+if (is_file('./controller/ponte.php')) {
+    require './controller/ponte.php';
+} else {
+    require '../controller/ponte.php';
+}
 session_start();
 $verifica = $_SESSION["id"];
 $sql = "SELECT link_temp FROM usuarios WHERE id=$verifica ";

@@ -1,32 +1,37 @@
-<?php 
-
-if (is_file('./models/functions.php')) {
-    require './models/functions.php';
+<?php
+if (is_file('./controller/ponte.php')) {
+    require './controller/ponte.php';
 } else {
-    require '../models/functions.php';
+    require '../controller/ponte.php';
 }
-if (!isset($_SESSION["email"])) {
 
-    //header("Refresh: 0;url=");
+situacaoLogin();
+
+if ($situacaoPerfil != "1" && $idverificador != null) {
     echo "<script>
-    let local=localStorage.getItem('estadoAtual');
+window.location.replace('view/login-inativo.php');
+</script>";
+
+} 
+//carregaPerfil();
+if (!isset($_SESSION["email"])) {
+    echo "<script>
+let local=localStorage.getItem('estadoAtual');
+
+
+if (local==4 || local==5){
    
-    if (local==4 || local==5){
-       
-        login();
-        window.location.reload(true);
-    }
-    
-    </script>";
+    login();
+    window.location.reload(true);
+}
+
+</script>";
+
 }
 
 
 
-if (is_file('../models/conexao/banco.php')) {
-    require_once '../models/conexao/banco.php';
-} else {
-    require_once './models/conexao/banco.php';
-}
+
 
 
 $verifica = null;

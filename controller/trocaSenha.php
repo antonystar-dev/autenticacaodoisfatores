@@ -1,6 +1,9 @@
 <?php
-require_once '../models/conexao/banco.php';
-require_once '../models/functions.php';
+if (is_file('./controller/ponte.php')) {
+    require './controller/ponte.php';
+} else {
+    require '../controller/ponte.php';
+}
 $senha = $_POST["senha"];
 $id= $_POST["id"];
 

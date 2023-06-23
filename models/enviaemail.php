@@ -1,5 +1,9 @@
 <?php
-require_once '../models/functions.php';
+if (is_file('./controller/ponte.php')) {
+    require './controller/ponte.php';
+} else {
+    require '../controller/ponte.php';
+}
 
 $original="../session/geracod.php";
 linkTemporario();

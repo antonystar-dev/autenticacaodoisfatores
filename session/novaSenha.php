@@ -1,32 +1,12 @@
 <?php
 session_start();
-
-require '../models/conexao/banco.php';
-$idtemp = $_GET["id"];
-$sql = "SELECT link_temp FROM usuarios WHERE link_temp='$idtemp'";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-
-        $sql = "SELECT id FROM usuarios WHERE link_temp='$idtemp'";
-        $result = $conn->query($sql);
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-
-                 $id = $row["id"];
-
-            }
-
-        }
-
-    }
-
+if (is_file('./controller/ponte.php')) {
+    require './controller/ponte.php';
 } else {
-    header("Refresh: 0;url='../view/email-expirado.php");
+    require '../../controller/ponte.php';
 }
-
-
-?>
+novaSenha();
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,13 +15,10 @@ if ($result->num_rows > 0) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/validaFormulario.js"></script>
-    <link rel='stylesheet' type='text/css' media='screen' href='../css/main.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../css/login.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../css/esqueciSenha.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../css/footer.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../css/cadastro.css'>
-
     <title>Gera Codigo</title>
+    <?php
+    include '../css/linkCSS.php';
+    ?>
 </head>
 
 <body>
@@ -58,11 +35,13 @@ if ($result->num_rows > 0) {
                 <input type="password" id="confSenha" name="senhaconfirm" class="senhaCadastro"
                     placeholder="Digite novamente a senha" required /><br />
                 <h4 style="color: white;">A senha deve atender aos requisitos de complexidade:</h4>
-                <p style="color: white; font-size:14px;">Numeros, Letras Maiusculas e minusculas, minimo de 6 caracteres</p>
+                <p style="color: white; font-size:14px;">Numeros, Letras Maiusculas e minusculas, minimo de 6 caracteres
+                </p>
                 <input type="hidden" name="id" value="<?php echo $id ?>" /><br />
                 <div class="campoBotoesEsqSenha">
                     <input type="submit" value="verificar" class="botaoCarregar" />
-                    <a href="http://2fatores.antonystar.com/"><button type="button" class="botaoCancelar" onclick="paginaInicial()">Cancelar</button></a>
+                    <a href="http://2fatores.antonystar.com/"><button type="button" class="botaoCancelar"
+                            onclick="paginaInicial()">Cancelar</button></a>
                 </div>
 
 
