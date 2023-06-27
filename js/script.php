@@ -1,7 +1,44 @@
+<?php
+
+if (!empty($_SESSION["email"])) {
+    ?>
+
+
+    <script type="text/javascript">
+        function pgAdmin() {
+            localStorage.setItem("estadoAtual", "4")
+            document.getElementById("corpo").innerHTML = `
+                    <?php
+                    require_once 'controller/perfilAtivo.php';
+
+                    ?>`;
+        }
+        function pgUsuario() {
+            localStorage.setItem("estadoAtual", "5")
+            document.getElementById("corpo").innerHTML = `
+                <?php
+                require_once 'controller/perfilAtivo.php';
+                ?>`;
+        }
+
+
+        function editaUsuariopg(id) {
+           // alert("eu sou o usuario"+id);
+           usuarioIndividual(id);
+        }
+    
+
+    </script>
+    <?php
+$asdf="<script>alert('testando');</script>";
+
+}
+
+?>
 <script type="text/javascript">
     function paginaInicial() {
         localStorage.setItem("estadoAtual", "0")
-       
+
         window.location.reload(true);
 
     }
@@ -19,8 +56,8 @@
             <?php
             require 'view/cadastro.html';
             ?>`
-             ocultaMenu();
-            ;
+        ocultaMenu();
+        ;
     }
     function login() {
         localStorage.setItem("estadoAtual", "3")
@@ -30,21 +67,6 @@
             ?>`
         ocultaMenu();
         ;
-    }
-    function pgAdmin() {
-        localStorage.setItem("estadoAtual", "4")
-        document.getElementById("corpo").innerHTML = `
-            <?php
-            require_once 'controller/perfilAtivo.php';
-
-            ?>`;
-    }
-    function pgUsuario() {
-        localStorage.setItem("estadoAtual", "5")
-        document.getElementById("corpo").innerHTML = `
-        <?php
-        require_once 'controller/perfilAtivo.php';
-        ?>`;
     }
 
     function estadoAtual() {
@@ -70,7 +92,7 @@
                 pgUsuario();
                 break;
             default:
-            document.getElementById("corpo").innerHTML = `
+                document.getElementById("corpo").innerHTML = `
             <?php
             require_once 'view/inicio.html';
 
@@ -84,7 +106,7 @@
         localStorage.setItem("estadoAtual", "0");
     }
 
-    
+
 
 
 

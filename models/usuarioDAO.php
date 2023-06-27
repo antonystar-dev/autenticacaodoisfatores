@@ -15,7 +15,7 @@ class UsuarioDAO
     {
         try {
             //$sql = "SELECT id, nome, senha, email,perfil_id  from  usuarios Inner Join perfil  on usuarios.perfil_id = perfil.id";
-            $sql = "SELECT id, nome, senha, email,perfil_id  from  usuarios";
+            $sql = "SELECT id, nome, senha, email,link_temp, situacao, perfil_id  from  usuarios";
             
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
@@ -76,14 +76,18 @@ class UsuarioDAO
             $sql = "UPDATE usuarios SET nome=?,
                                        senha=?,
                                        email=?,
-                                       perfil_id=?
+                                       perfil_id=?,
+                                       link_temp=?,
+                                       situacao=?
                                        WHERE id= ?";
             $stmt = $this->pdo->prepare($sql);
             $stmt->bindValue(1, $usuarioDTO->getNome());
             $stmt->bindValue(2, $usuarioDTO->getSenha());
             $stmt->bindValue(3, $usuarioDTO->getEmail());
             $stmt->bindValue(4, $usuarioDTO->getPerfil_id());
-            $stmt->bindValue(5, $usuarioDTO->getId());
+            $stmt->bindValue(5, $usuarioDTO->getEstLogin());
+            $stmt->bindValue(6, $usuarioDTO->getSituacaoConta());
+            $stmt->bindValue(7, $usuarioDTO->getId());
             $stmt->execute();
         } catch (PDOException $exc) {
             echo $exc->getMessage();

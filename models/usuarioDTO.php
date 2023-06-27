@@ -7,8 +7,10 @@ class UsuarioDTO {
     private $senha;
     private $email;
     private $perfil_id;
+    private $estLogin;
+    private $situacaoConta;
     
-    function getId() {
+      function getId() {
         return $this->id;
     }
 
@@ -25,6 +27,14 @@ class UsuarioDTO {
 
     function getPerfil_id() {
         return $this->perfil_id;
+    }
+    
+    function getEstLogin() {
+        return $this->estLogin;
+    }
+    
+    function getSituacaoConta() {
+        return $this->situacaoConta;
     }
     
     function setId($id) {
@@ -44,6 +54,14 @@ class UsuarioDTO {
 
     function setPerfil_id($perfil_id) {
         $this->perfil_id = $perfil_id;
+    }
+    
+    function setEstLogin($estLogin) {
+        $this->estLogin= $estLogin;
+    }
+    
+    function setSituacaoConta($situacaoConta) {
+        $this->situacaoConta= $situacaoConta;
     }
    
 }

@@ -5,15 +5,7 @@ if (is_file('./controller/ponte.php')) {
     require '../controller/ponte.php';
 }
 
-situacaoLogin();
 
-if ($situacaoPerfil != "1" && $idverificador != null) {
-    echo "<script>
-window.location.replace('view/login-inativo.php');
-</script>";
-
-} 
-//carregaPerfil();
 if (!isset($_SESSION["email"])) {
     echo "<script>
 let local=localStorage.getItem('estadoAtual');
@@ -28,6 +20,15 @@ if (local==4 || local==5){
 </script>";
 
 }
+situacaoLogin();
+if ($situacaoPerfil != "1" && $idverificador != null) {
+    echo "<script>
+window.location.replace('view/login-inativo.php');
+</script>";
+
+} 
+//carregaPerfil();
+
 
 
 

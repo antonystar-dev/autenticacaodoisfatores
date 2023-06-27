@@ -224,7 +224,7 @@ function bloqueiosPerfil()
             break;
         default:
             $situacao = "Por favor, verifique o seu endereço de e-mail para validação do cadastro";
-            $emailconf = "<a href='#'>Confirmar email</a><h3 class='mensagemAlerta'>após a confirmação do e-mail será necessario a atualização da pagina</h3>";
+            $emailconf = "<a href='../controller/confirmaEmail.php'>Confirmar email</a><h3 class='mensagemAlerta'>após a confirmação do e-mail será necessario a atualização da pagina</h3>";
 
     }
 
