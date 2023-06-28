@@ -1,73 +1,5 @@
 <?php
-
-//include '../../controller/validaLogin.php';
-//require_once '../models/usuarioDAO.php';
-require_once './models/usuarioDAO.php';
-//include './models/functions.php';
-
-
-$usuarioDAO = new UsuarioDAO();
-$usuarios = $usuarioDAO->getAllUsuario();
-echo "<br>";
-echo " <form method='GET' action=''>";
-echo "<table border='0' align='center'>";
-echo "<tr>";
-echo "  <th>ID</th>";
-echo "  <th>Nome</th>";
-echo "  <th>Senha</th>";
-echo "  <th>E-mail</th>";
-echo "  <th>Estado</th>";
-echo "  <th>Situação</th>";
-echo "  <th>Perfil</th>";
-echo "  <th>Atualizar</th>";
-echo "</tr>";
-echo "<tr ><td colspan='8'><hr/></td><tr/>";
-
-
-foreach ($usuarios as $u) {
-    echo "<tr>";
-    echo "<td>{$u["id"]}</td>";
-    echo "  <td>{$u["nome"]}</td>";
-    echo "  <td>{$u["senha"]}</td>";
-    echo "  <td>{$u["email"]}</td>";
-    echo "  <td>{$u["link_temp"]}</td>";
-    echo "  <td>{$u["situacao"]}</td>";
-
-    if ($u["perfil_id"] == 1) {
-        echo "<td>Administrador</td> ";
-    } else {
-        echo "<td>Usuario</td> ";
-    }
-
-    echo "  <td><button type='submit' onclick='editaUsuariopg({$u["id"]})'  name='at'value='{$u["id"]}'>Alterar</button></td>";
-    echo "</tr>";
-    echo "<tr ><td colspan='8'><hr/></td><tr/>";
-
-}
-echo "</table>";
-echo "</form>";
-
-$idAltera = $_GET['at'] ?? null;
-
-
-$sql = "SELECT * FROM usuarios WHERE id='$idAltera'";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-
-        $id = $row["id"];
-        $nome = $row["nome"] ?? null;
-        $senha = $row["senha"] ?? null;
-        $email = $row["email"] ?? null;
-        $estLogin = $row["link_temp"] ?? null;
-        $situacaoConta = $row["situacao"] ?? null;
-        $idPerfil = $row["perfil_id"] ?? null;
-
-    }
-
-}
-
-
+include './controller/adminPGController.php';
 if ($id ?? null != null) {
     //echo "não foi";
     ?>
@@ -80,8 +12,9 @@ if ($id ?? null != null) {
         </label><label> ID: </label><label>
             <?php echo $id ?? null; ?>
         </label>
-        <form action="./controller/alterarUsuario.php" method="post" name="form1">
+        <form action="./controller/alterarUsuario.php" method="post" id="form1">
             <br>
+            <input type="hidden" name="id" value="<?php echo $id ?? null; ?>" />
             <label>Nome:</label><br />
             <input type="text" name="nome" class="campoEntrar" placeholder="Nome do usuario"
                 value="<?php echo $nome ?? null; ?>" /><br />
@@ -92,11 +25,39 @@ if ($id ?? null != null) {
             <input type="email" name="email" class="campoEntrar" placeholder="e-mail"
                 value="<?php echo $email ?? null; ?>" /><br />
             <label>Estado:</label><br />
-            <input type="text" name="link_temp" class="campoEntrar" placeholder="Estado do login do usuario"
+            <input type="text" name="estado" class="campoEntrar" placeholder="Estado do login do usuario"
                 value="<?php echo $estLogin ?? null; ?>" /><br />
             <label>Situação:</label><br />
-            <input type="text" name="situacao" class="campoEntrar" placeholder="Situação da conta"
-                value="<?php echo $situacaoConta ?? null; ?>" /><br />
+            <select name="situacao" class="campoEntrar" value="situacao">
+                <?php
+                switch ($situacaoPerfil = $u["situacao"]) {
+                    case "1":
+                        echo "<option value='1' selected>" . $situacao = "Email verificado" . "</option>";
+                        echo " <option value='2' >" . $situacao = "Excluida pelo usuario" . "</option>";
+                        echo "<option value='3' >" . $situacao = "Excluida por ADM" . "</option>";
+                        echo "<option value='4' >" . $situacao = "Verificar e-mail" . "</option>";
+                        break;
+                    case "2":
+                        echo "<option value='1' >" . $situacao = "Email verificado" . "</option>";
+                        echo " <option value='2' selected>" . $situacao = "Excluida pelo usuario" . "</option>";
+                        echo "<option value='3' >" . $situacao = "Excluida por ADM" . "</option>";
+                        echo "<option value='4' >" . $situacao = "Verificar e-mail" . "</option>";
+                        break;
+                    case "3":
+                        echo "<option value='1' >" . $situacao = "Email verificado" . "</option>";
+                        echo " <option value='2' >" . $situacao = "Excluida pelo usuario" . "</option>";
+                        echo "<option value='3' selected>" . $situacao = "Excluida por ADM" . "</option>";
+                        echo "<option value='4' >" . $situacao = "Verificar e-mail" . "</option>";
+                        break;
+                    default:
+                        echo "<option value='1' >" . $situacao = "Email verificado" . "</option>";
+                        echo " <option value='2' >" . $situacao = "Excluida pelo usuario" . "</option>";
+                        echo "<option value='3' >" . $situacao = "Excluida por ADM" . "</option>";
+                        echo "<option value='4' selected>" . $situacao = "Verificar e-mail" . "</option>";
+                }
+                ?>
+            </select>
+            <br />
             <label>Perfil:</label><br />
 
             <select name="perfil_id" class="campoEntrar" value="perfil_id">
@@ -110,17 +71,19 @@ if ($id ?? null != null) {
                 }
                 ?>
             </select>
-            <button class="botaoEntrar" type="submit">Enviar</button>
-            
-            <a href="?#"><button class="botaoCancelar">Cancela</button></a>
-        </form>
-        
+            <button class="botaoEntrar" type="submit" form="form1">Atualizar</button>
+            <button class="botaoCancelar" type="submit" form="cancelarFormulario" >Cancelar</button>
 
+        </form>
+
+        <form id="cancelarFormulario" action="" method="get">
+            <input type="hidden" name="" value="#" />
+            
+        </form>
     </div>
     <?php
 }
-//bloqueiosPerfil();
-echo $situacao ?? null;
+
 
 
 ?>

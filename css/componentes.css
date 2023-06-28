@@ -57,7 +57,7 @@
 }
 
 .botaoCarregar {
-    width: 40%;
+    width: 150px;
     background-color: #08fa81;
     color: #4C4A62;
     padding: 14px 20px;
@@ -103,7 +103,7 @@
 }
 
 .campoEntrar {
-    width: 90%;
+    width: 80%;
     padding: 12px 15px;
     margin: 4px;
     display: inline-block;
@@ -128,7 +128,7 @@
 }
 
 .botaoEntrar {
-    width: 40%;
+    width: 150px;
     background-color: #08fa81;
     color: #4C4A62;
     padding: 14px 20px;
@@ -140,12 +140,12 @@
 }
 
 .botaoEntrar:hover {
-    background-color: #CFD8DC;
+    /* background-color: #CFD8DC; */
     background-color: #08fa81;
 }
 
 .botaoCancelar {
-    width: 40%;
+    width: 150px;
     background-color: #CFD8DC;
     color: #4C4A62;
     padding: 14px 20px;
@@ -199,3 +199,37 @@ a:active {
     text-align: center;
      
   }
+  @media screen and (min-width: 1201px) {
+    body{
+       /* background-color: red; */
+    }
+ }
+ @media screen and (min-width: 1025px) and (max-width: 1200px) {
+    body{
+       background-color: blue;
+    }
+ }
+ 
+ @media screen and (min-width: 769px) and (max-width: 1024px) {
+    body{
+       background-color: blueviolet;
+    }
+ }
+ @media screen and (min-width: 481px) and (max-width: 768px) {
+    body{
+       background-color: green;
+    }
+    .img {
+        background-image:url("../img/fundo.jpg");
+        
+    }
+ }
+ @media screen and (min-width: 320px) and (max-width: 480px) {
+    body{
+       background-color: yellow;
+    }
+    .img {
+        background-image:url("../img/fundo.jpg");
+    }
+ }
+ 

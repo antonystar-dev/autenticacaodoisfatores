@@ -2,14 +2,16 @@
 
 require_once '../models/usuarioDTO.php';
 require_once '../models/usuarioDAO.php';
+require_once '../models/functions.php';
 
 // recuperei os dados do formulario
-$nome = $_POST["nome"];
-$senha = $_POST["senha"];
-$email = $_POST["email"];
-$estLogin = $_POST["link_temp"];
-$situacaoConta = $_POST["situacao"];
-$perfil_id = $_POST["perfil_id"];
+echo $id = $_POST["id"];
+echo $nome = $_POST["nome"];
+echo $senha = $_POST["senha"];
+echo $email = $_POST["email"];
+echo $estLogin = $_POST["link_temp"];
+echo $situacaoConta = $_POST["situacao"];
+echo $perfil_id = $_POST["perfil_id"];
 
 
 $usuarioDTO = new UsuarioDTO();
@@ -19,6 +21,7 @@ $usuarioDTO->setPerfil_id($perfil_id);
 $usuarioDTO->setEmail($email);
 $usuarioDTO->setEstLogin($estLogin);
 $usuarioDTO->setSituacaoConta($situacaoConta);
+$usuarioDTO->setId($id);
 
 
 
@@ -27,6 +30,8 @@ $usuarioDAO = new UsuarioDAO();
 $usuarioDAO->updateUsuarioById($usuarioDTO);
 
 
-echo $msg = "Atualizado com sucesso";
+$msg="Perfil alterado com sucesso";
+alertaPositivo();
+header("Refresh: 0;url='../");
 
 ?>
