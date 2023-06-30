@@ -39,6 +39,7 @@ if ($situacaoPerfil == "1") {
         <h2 class="tituloAlertaCodigo">
             <?php echo $emailconf ?? null; ?>
         </h2>
+        <span><a href="../controller/logoffController.php">Sair</a></span>
 
     </div>
 </body>

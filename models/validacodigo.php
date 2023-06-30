@@ -16,7 +16,7 @@ if ($result->num_rows > 0) {
     if (md5($codigo) == $row ["cod_temp"]) {
      
         //aqui fica a função q envia (Logado) no banco.
-        $SessaoID = "UPDATE usuarios SET link_temp='LOGADO' WHERE id=$id ";
+        $SessaoID = "UPDATE usuarios SET estado='LOGADO' WHERE id=$id ";
         if ($conn->query($SessaoID) === TRUE) {
           //echo "enviou";
       } else {

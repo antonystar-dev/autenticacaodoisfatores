@@ -1,5 +1,6 @@
 <?php
 session_start();
+$idsessao = session_id();
 if (is_file('./controller/ponte.php')) {
     require './controller/ponte.php';
 } else {
@@ -37,7 +38,7 @@ novaSenha();
                 <h4 style="color: white;">A senha deve atender aos requisitos de complexidade:</h4>
                 <p style="color: white; font-size:14px;">Numeros, Letras Maiusculas e minusculas, minimo de 6 caracteres
                 </p>
-                <input type="hidden" name="id" value="<?php echo $id ?>" /><br />
+                <input type="hidden" name="id" value="<?php echo $idsessao ?>" /><br />
                 <div class="campoBotoesEsqSenha">
                     <input type="submit" value="verificar" class="botaoCarregar" />
                     <a href="http://2fatores.antonystar.com/"><button type="button" class="botaoCancelar"

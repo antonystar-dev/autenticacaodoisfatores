@@ -2,7 +2,7 @@
 
 require_once './models/usuarioDAO.php';
 //require_once './models/functions.php';
-
+echo md5(1234);
 $usuarioDAO = new UsuarioDAO();
 $usuarios = $usuarioDAO->getAllUsuario();
 echo "<br>";
@@ -70,6 +70,9 @@ if ($result->num_rows > 0) {
         $nome = $row["nome"] ?? null;
         $senha = $row["senha"] ?? null;
         $email = $row["email"] ?? null;
+        $codTemp = $row["cod_temp"] ?? null;
+        $dirTemp = $row["dir_temp"] ?? null;
+        $linkTemp = $row["link_temp"] ?? null;
         $estLogin = $row["estado"] ?? null;
         $situacaoConta = $row["situacao"] ?? null;
         $idPerfil = $row["perfil_id"] ?? null;

@@ -66,7 +66,7 @@ function linkTemporario()
     global $link;
     global $idsessao;
     global $emailRecuperacao;
-
+echo $emailRecuperacao;
     if (empty($_SESSION["id"])) {
         $sql = "SELECT id, nome FROM usuarios WHERE email='$emailRecuperacao'";
         $result = $conn->query($sql);
@@ -122,7 +122,7 @@ function codigoExpirado()
     } else {
         echo "não carregou";
     }
-    $sql = "UPDATE usuarios SET cod_temp='EXPIRADO', dir_temp='EXPIRADO' WHERE link_temp='$id'";
+    $sql = "UPDATE usuarios SET cod_temp='EXPIRADO', dir_temp='EXPIRADO', link_temp='EXPIRADO' WHERE link_temp='$id'";
 
     if ($conn->query($sql) === TRUE) {
         //echo "Código Expirado";
@@ -164,6 +164,7 @@ function geraCodigo()
 function novaSenha()
 {
     global $conn;
+    
     // require '../models/conexao/banco.php';
     $idtemp = $_GET["id"];
     $sql = "SELECT link_temp FROM usuarios WHERE link_temp='$idtemp'";

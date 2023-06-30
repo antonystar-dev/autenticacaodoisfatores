@@ -6,15 +6,15 @@ if (is_file('./controller/ponte.php')) {
 }
 session_start();
 $verifica = $_SESSION["id"];
-$sql = "SELECT link_temp FROM usuarios WHERE id=$verifica ";
+$sql = "SELECT estado FROM usuarios WHERE id=$verifica ";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
 
-        if ($row["link_temp"] == "LOGADO") {
-            echo "logof";
+        if ($row["estado"] == "LOGADO") {
+            //echo "logof";
             session_destroy();
-            $SessaoID = "UPDATE usuarios SET link_temp='DESLOGADO' WHERE id=$verifica ";
+            $SessaoID = "UPDATE usuarios SET estado='DESLOGADO' WHERE id=$verifica ";
             if ($conn->query($SessaoID) === TRUE) {
                 //echo "enviou";
             }
@@ -25,7 +25,6 @@ if ($result->num_rows > 0) {
 
     }
 }
-
 
 session_destroy();
 header("Refresh: 0;url='../'");

@@ -24,6 +24,15 @@ if ($id ?? null != null) {
             <label>E-mail:</label><br />
             <input type="email" name="email" class="campoEntrar" placeholder="e-mail"
                 value="<?php echo $email ?? null; ?>" /><br />
+            <label>Codigo Temporario:</label><br />
+            <input type="text" name="cod_temp" class="campoEntrar" placeholder="Codigo temporario"
+                value="<?php echo $codTemp ?? null; ?>" /><br />
+            <label>Diretorio Temporario:</label><br />
+            <input type="text" name="dir_temp" class="campoEntrar" placeholder="diretorio temporario"
+                value="<?php echo $dirTemp ?? null; ?>" /><br />
+            <label>Link Temporario:</label><br />
+            <input type="text" name="link_temp" class="campoEntrar" placeholder="link temporario"
+                value="<?php echo $linkTemp ?? null; ?>" /><br />
             <label>Estado:</label><br />
             <input type="text" name="estado" class="campoEntrar" placeholder="Estado do login do usuario"
                 value="<?php echo $estLogin ?? null; ?>" /><br />
@@ -71,14 +80,15 @@ if ($id ?? null != null) {
                 }
                 ?>
             </select>
+            <br>
             <button class="botaoEntrar" type="submit" form="form1">Atualizar</button>
-            <button class="botaoCancelar" type="submit" form="cancelarFormulario" >Cancelar</button>
+            <button class="botaoCancelar" type="submit" form="cancelarFormulario">Cancelar</button>
 
         </form>
 
         <form id="cancelarFormulario" action="" method="get">
             <input type="hidden" name="" value="#" />
-            
+
         </form>
     </div>
     <?php

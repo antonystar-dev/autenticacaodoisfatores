@@ -29,15 +29,13 @@ class UsuarioDAO
     public function salvarUsuario(UsuarioDTO $usuarioDTO)
     {
         try {
-            $sql = "INSERT INTO usuarios(nome,senha,email,estado,situacao, perfil_id) 
-                    VALUES (?,?,?,?,?,?)";
+            $sql = "INSERT INTO usuarios(nome,senha,email, perfil_id) 
+                    VALUES (?,?,?,?)";
             $stmt = $this->pdo->prepare($sql);
             $stmt->bindValue(1, $usuarioDTO->getNome());
             $stmt->bindValue(2, $usuarioDTO->getSenha());
             $stmt->bindValue(3, $usuarioDTO->getEmail());
-            $stmt->bindValue(4, $usuarioDTO->getEstLogin());
-            $stmt->bindValue(5, $usuarioDTO->getSituacaoConta());
-            $stmt->bindValue(6, $usuarioDTO->getPerfil_id());
+            $stmt->bindValue(4, $usuarioDTO->getPerfil_id());
 
             return $stmt->execute();
         } catch (PDOException $exc) {
