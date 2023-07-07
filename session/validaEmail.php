@@ -3,7 +3,7 @@ session_start();
 
 require '../controller/ponte.php';
 
-//novaSenha();
+confirmaLogin();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +24,7 @@ require '../controller/ponte.php';
     <h2 class="tituloAlerta">Verificação de e-mail</h2>
     <hr />
     <h1 class="tituloAlertaCodigo">
-      Endereço de e-mail confirmado com sucesso.
+    <?php echo $msg; ?>
     </h1>
 
   </div>

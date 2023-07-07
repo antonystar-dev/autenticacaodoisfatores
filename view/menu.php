@@ -15,11 +15,11 @@
         }
         switch ($seçãoPerfilcol) {
             case "Administrador":
-                echo'<button onclick=pgAdmin() class="botao">Perfil</button>';
+                echo'<button onclick=pgPerfil() class="botao">Perfil</button>';
                 echo'<a href="./controller/logoffController.php"><button  class="botao">Sair</button></a>';
                 break;
             case "Usuario":
-                echo'<button onclick=pgUsuario() class="botao">Perfil</button>';
+                echo'<button onclick=pgPerfil() class="botao">Perfil</button>';
                 echo'<a href="./controller/logoffController.php"><button  class="botao">Sair</button></a>';
                 break;
                 default:
@@ -43,5 +43,9 @@
     
 </div>
 <div id="alertaNegativoID">
+    
+</div>
+
+<div id="alertas">
     
 </div>

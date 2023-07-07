@@ -159,6 +159,22 @@
 .botaoCancelar:hover {
     background-color: #CFD8DC;
 }
+.botaoExcluir {
+    width: 150px;
+    background-color: #ec4949;
+    color: #4C4A62;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.botaoExcluir:hover {
+    background-color: #ec4949;
+}
+
 
 a:link,
 a:visited,

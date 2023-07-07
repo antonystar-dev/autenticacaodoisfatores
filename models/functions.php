@@ -1,6 +1,6 @@
 <?php
 
- function enviaEmail()
+function enviaEmail()
 {
 
     global $conn;
@@ -66,7 +66,7 @@ function linkTemporario()
     global $link;
     global $idsessao;
     global $emailRecuperacao;
-echo $emailRecuperacao;
+    echo $emailRecuperacao;
     if (empty($_SESSION["id"])) {
         $sql = "SELECT id, nome FROM usuarios WHERE email='$emailRecuperacao'";
         $result = $conn->query($sql);
@@ -164,7 +164,7 @@ function geraCodigo()
 function novaSenha()
 {
     global $conn;
-    
+
     // require '../models/conexao/banco.php';
     $idtemp = $_GET["id"];
     $sql = "SELECT link_temp FROM usuarios WHERE link_temp='$idtemp'";
@@ -191,12 +191,34 @@ function novaSenha()
 
 
 }
+function confirmaLogin()
+{
+    global $conn;
+    global $msg;
+
+    // require '../models/conexao/banco.php';
+    $id = $_GET["id"] ?? null;
+    if ($id != null) {
+        $sql = "UPDATE usuarios SET situacao='1' WHERE link_temp='$id'";
+
+        if ($conn->query($sql) === TRUE) {
+
+            $msg="Endereço de e-mail confirmado com sucesso";
+
+        } else {
+            echo "deu erro " . $conn->error;
+        }
+    }else{
+        echo "";
+        $msg="Chave expirada, solicite um novo email com o link";
+    }
+}
 function situacaoLogin()
 {
     global $conn;
     global $situacaoPerfil;
     global $idverificador;
-    $idverificador = $_SESSION['id'] ??null;
+    $idverificador = $_SESSION['id'] ?? null;
     $sql = "SELECT situacao FROM usuarios WHERE id='$idverificador'";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
@@ -205,7 +227,7 @@ function situacaoLogin()
             $situacaoPerfil = $row["situacao"];
         }
 
-    } 
+    }
 }
 function bloqueiosPerfil()
 {
@@ -214,7 +236,7 @@ function bloqueiosPerfil()
     global $emailconf;
 
     switch ($situacaoPerfil) {
-        
+
         case "2":
             $situacao = "Conta excluida a pedido do usuario";
             $emailconf = "Saiba mais";

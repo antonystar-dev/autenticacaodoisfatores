@@ -1,48 +1,37 @@
 ------Coisas que tenho que corrigir no sistema------
 
-<!-- 4 Formatação do email enviado para o usuario
-    //4.1 Email com o link do codigo
-    //4.2 Email com o link do esqueci a senha
-    4.3 Email com o link da confirmação de criação de conta. -->
+
 5 Arrumar o <head> com a informações corretas e codigo(ico tbm).
 8 Criptografar a senha.
 12 Excluir os arquivos jogados sem utilização.
     12.2 view/mensagemAlerta.php
 13 Remover os comentarios desnecessarios.
 17 Arrumar a responsividade do site.
+    17.1 Tirar as cores modelo
+   // 17.2 Arrumar a tabela pg admin
 18 controller/loginController.php colocar a função da mensagem negativa
 20 Fazer a validação da senha no view/cadastro.html
-<!-- 25 A logica de validação do LOGADO está quebrando a expiração do codigo no banco, apresenta a msg ("não carregou") -->
 26 Criação do crud dos usuarios;
     //26.1 cadastra
     //26.2 altera
     //26.3 lista
-    //26.4 Exclui
-27 Arrumar a confirmação do email
+    26.4 Exclui
+<!-- 27 Arrumar a confirmação do email
     27.1 Arrumar a logica para confirmar
-    27.2 Arrumar o fato de estar matando a sessao quando é enviado o email;
+    27.2 Arrumar o fato de estar matando a sessao quando é enviado o email; -->
 28 Criar a pagina perfil( onde mostra as info do usuario)
     28.1 Colocar a opção de alterar a senha e email
     28.2 coloar a opção de solicitar a exclusão da conta
 29 validação do cadastro  <!--  var login = document.getElementById('login').value; colocar na verificação do email -->
 30 Corrigir a conexão do banco sem POO, visto que está apresentando falhas no ID;
     30.1 O problema é mais pq o id da sessao expira, posso colocar uma mensagem falando q expirou.
-<!-- 31 Terminar a pagina de alteração de usuario;
-    31.1 colocar a função de atualização dos dados
-    31.2 puxar a lista da situação da conta
-        31.2.1 Na listagem geral so coloco o tipo de bloqueio;
-        31.2.2 Na parte de alterar coloco em texto o tipo ja setado e coloco um select com a opçao de mudar -->
-<!-- 32 A função de alterar a senha não esta alterando -->
 33 Pagina do esqueci a senha em faça seu cadastro está mostrando o menu e rodape
-
-   
-    
-
 
 
 ------Implementação futura-----
 1 Separação dos arquivos PHP em funções (atualização de codigo)
 2 Criar a opção de pedir confirmação de email quando o usuario se cadastra.
+
 
 ------Coisas que foram corrigidas no sistema------
 <!-- 1 Implementação do session para remover o metodo $_GET
@@ -82,3 +71,14 @@ OBS: verificar se essa função ja vai se aplicar a situação  -->
 <!-- 24 view/login-inativo.php
     24.1 colocar o php em function
     24.2 terminar a logica e Formatação -->
+    <!-- 4 Formatação do email enviado para o usuario
+    //4.1 Email com o link do codigo
+    //4.2 Email com o link do esqueci a senha
+    4.3 Email com o link da confirmação de criação de conta. -->
+    <!-- 25 A logica de validação do LOGADO está quebrando a expiração do codigo no banco, apresenta a msg ("não carregou") -->
+    <!-- 31 Terminar a pagina de alteração de usuario;
+    31.1 colocar a função de atualização dos dados
+    31.2 puxar a lista da situação da conta
+        31.2.1 Na listagem geral so coloco o tipo de bloqueio;
+        31.2.2 Na parte de alterar coloco em texto o tipo ja setado e coloco um select com a opçao de mudar -->
+<!-- 32 A função de alterar a senha não esta alterando -->

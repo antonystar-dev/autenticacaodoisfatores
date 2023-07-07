@@ -1,6 +1,6 @@
 .itens-menu {
 
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .itens-menu-grupo {
@@ -12,13 +12,13 @@
 .menu {
     background-color: #4C4A62;
     width: 100%;
-    padding: 10px 0;
+    padding: 10px 0 ;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.botao {
+/* .botao {
     color: #4C4A62;
     background-color: white;
     border-radius: 5px;
@@ -29,9 +29,9 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-transform: uppercase;
-}
+} */
 
-/* @media screen and (min-width: 1025px) and (max-width: 1200px) {
+@media screen and (min-width: 1201px) {
     .botao {
         color: #4C4A62;
         background-color: white;
@@ -39,7 +39,22 @@
         height: 30px;
         width: 150px;
         position: relative;
-        left: 40%;
+        left:47%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+
+    }
+}
+ @media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .botao {
+        color: #4C4A62;
+        background-color: white;
+        border-radius: 5px;
+        height: 30px;
+        width: 150px;
+        position: relative;
+        left:40%;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: bold;
         text-transform: uppercase;
@@ -54,10 +69,43 @@
         height: 30px;
         width: 150px;
         position: relative;
-        left: 30px;
+        left:20%;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: bold;
         text-transform: uppercase;
 
     }
- } */
+ } 
+ @media screen and (min-width: 481px) and (max-width: 768px) {
+    .botao {
+        color: #4C4A62;
+        background-color: white;
+        border-radius: 5px;
+        height: 20px;
+        width: 90px;
+        font-size: 12px;
+        position: relative;
+        /* left:20%; */
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        
+
+    }
+ }
+ @media screen  and (max-width: 480px) {
+    .botao {
+        color: #4C4A62;
+        background-color: white;
+        border-radius: 5px;
+        height: 20px;
+        width: 90px;
+        font-size: 12px;
+        position: relative;
+        /* left:20%; */
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+
+    }
+ }

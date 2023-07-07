@@ -20,17 +20,29 @@ if (!empty($_SESSION["email"])) {
                 require_once 'controller/perfilAtivo.php';
                 ?>`;
         }
+        function pgPerfil() {
+            localStorage.setItem("estadoAtual", "6")
+            document.getElementById("corpo").innerHTML = `
+                <?php
+                require_once 'view/perfil.php';
+                ?>`;
+        }
 
 
         function editaUsuariopg(id) {
            // alert("eu sou o usuario"+id);
            usuarioIndividual(id);
         }
+
+        function campoAlerta(id){
+            //alert('teste');
+            document.getElementById("alertas").innerHTML = '<div> testeeeee' + id + '</div>';
+        }
     
 
     </script>
     <?php
-$asdf="<script>alert('testando');</script>";
+
 
 }
 
@@ -43,29 +55,32 @@ $asdf="<script>alert('testando');</script>";
 
     }
     function esqueciSenha() {
+        ocultaMenu();
         localStorage.setItem("estadoAtual", "1")
         document.getElementById("corpo").innerHTML = `
             <?php
             require 'view/esqueci-senha.html';
             ?>`
-        ocultaMenu();;
+        ;
     }
     function cadastrar() {
+        ocultaMenu();
         localStorage.setItem("estadoAtual", "2")
         document.getElementById("corpo").innerHTML = `
             <?php
             require 'view/cadastro.html';
             ?>`
-        ocultaMenu();
+        
         ;
     }
     function login() {
+        ocultaMenu();
         localStorage.setItem("estadoAtual", "3")
         document.getElementById("corpo").innerHTML = `
             <?php
             require 'view/login.html';
             ?>`
-        ocultaMenu();
+        
         ;
     }
 
@@ -90,6 +105,9 @@ $asdf="<script>alert('testando');</script>";
                 break;
             case '5':
                 pgUsuario();
+                break;
+                case '6':
+                pgPerfil();
                 break;
             default:
                 document.getElementById("corpo").innerHTML = `
@@ -123,7 +141,8 @@ $asdf="<script>alert('testando');</script>";
 
         const mensagemExibida = localStorage.getItem("mensagemNegativa");
         if (localStorage.getItem("mensagemNegativa") == null) {
-            //alert("olha o trem errado aq");
+            /* alert("olha o trem errado aq"); */
+            exit
         }
         document.getElementById("alertaNegativoID").innerHTML = '<div class="alertaNegativo">' + mensagemExibida + '</div>';
 

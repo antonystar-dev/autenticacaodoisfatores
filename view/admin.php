@@ -62,7 +62,7 @@ if ($id ?? null != null) {
                         echo "<option value='1' >" . $situacao = "Email verificado" . "</option>";
                         echo " <option value='2' >" . $situacao = "Excluida pelo usuario" . "</option>";
                         echo "<option value='3' >" . $situacao = "Excluida por ADM" . "</option>";
-                        echo "<option value='4' selected>" . $situacao = "Verificar e-mail" . "</option>";
+                        echo "<option value='4' >" . $situacao = "Verificar e-mail" . "</option>";
                 }
                 ?>
             </select>
@@ -83,10 +83,15 @@ if ($id ?? null != null) {
             <br>
             <button class="botaoEntrar" type="submit" form="form1">Atualizar</button>
             <button class="botaoCancelar" type="submit" form="cancelarFormulario">Cancelar</button>
+            <button class="botaoExcluir" type="submit" onclick="campoAlerta(<?php echo $id ?? null; ?>)" form="excluiUsuario">Excluir</button>
 
         </form>
 
         <form id="cancelarFormulario" action="" method="get">
+            <input type="hidden" name="" value="#" />
+
+        </form>
+        <form id="excluiUsuario" action="" method="get">
             <input type="hidden" name="" value="#" />
 
         </form>

@@ -1,46 +1,56 @@
-.tituloTabela{
+.tituloTabela {
     background-color: rgb(58, 55, 55);
     padding: 10px;
 }
-.colunaTabela1{
+
+.colunaTabela1 {
     background-color: rgb(45, 231, 184);
     padding: 10px;
 }
-.colunaTabela2{
-    
+
+.colunaTabela2 {
+
     padding: 10px;
 }
-.colunaTabela3{
+
+.colunaTabela3 {
     background-color: rgb(0, 255, 0);
     padding: 10px;
 }
-.colunaTabela4{
+
+.colunaTabela4 {
     background-color: yellow;
     padding: 10px;
 }
-.colunaTabela5{
+
+.colunaTabela5 {
     background-color: orangered;
     padding: 10px;
 }
-.colunaTabela6{
+
+.colunaTabela6 {
     background-color: red;
     padding: 10px;
 }
-.colunaTabela7{
+
+.colunaTabela7 {
     background-color: rgb(127, 16, 218);
     padding: 10px;
 }
-.colunaTabela8{
+
+.colunaTabela8 {
     background-color: rgb(90, 56, 33);
     padding: 10px;
 }
-.tabelaAdmin{
+
+.tabelaAdmin {
     color: white;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
 }
-.botaoAlterarADM{
+
+.botaoAlterarADM {
     background-color: #08fa81;
     color: #4C4A62;
     padding: 14px 20px;
@@ -52,38 +62,95 @@
 }
 
 @media screen and (min-width: 1201px) {
-    body{
-       /* background-color: red; */
+    body {
+        /* background-color: red; */
     }
- }
- @media screen and (min-width: 1025px) and (max-width: 1200px) {
-    body{
-       background-color: blue;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    body {
+        background-color: blue;
     }
- }
- 
- @media screen and (min-width: 769px) and (max-width: 1024px) {
-    body{
-       background-color: blueviolet;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        background-color: blueviolet;
     }
- }
- @media screen and (min-width: 481px) and (max-width: 768px) {
-    body{
-       background-color: green;
+
+    .sumir {
+        display: none;
     }
- }
- @media screen and (min-width: 320px) and (max-width: 480px) {
-    body{
-       background-color: yellow;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        background-color: green;
+
     }
- }
- .alterarDados {
+
+    .sumir {
+        display: none;
+    }
+
+    .colunaTabela1 {
+        
+        padding: 5px;
+    }
+
+    .colunaTabela2 {
+
+        padding: 5px;
+    }
+
+    .colunaTabela3 {
+        
+        padding: 5px;
+    }
+
+    .colunaTabela4 {
+        
+        padding: 5px;
+    }
+
+    .colunaTabela5 {
+        
+        padding: 5px;
+    }
+
+    .colunaTabela6 {
+        
+        padding: 5px;
+    }
+
+    .tabelaAdmin {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    body {
+        background-color: yellow;
+    }
+    .sumir {
+        display: none;
+    }
+
+    .celular {
+        display: none;
+    }
+    .tabelaAdmin {
+        font-size: 12px;
+    }
+}
+
+.alterarDados {
     background-color: rgb(73, 70, 70);
     height: 900px;
     border: 2px solid black;
     padding: 20px;
     width: 50%;
-    border-radius:0 25px;
+    border-radius: 0 25px;
     position: absolute;
     top: 100px;
     left: 25%;
@@ -92,5 +159,5 @@
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
- 
- }
+
+}
