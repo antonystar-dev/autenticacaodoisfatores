@@ -113,8 +113,8 @@ function codigoExpirado()
             $dirtemp = $row["dir_temp"];
 
             if ($dirtemp != "EXPIRADO") {
-                unlink("../temp/$dirtemp/$dirtemp.php");
-                rmdir("../temp/$dirtemp/");
+                unlink("../../temp/$dirtemp/$dirtemp.php");
+                rmdir("../../temp/$dirtemp/");
             }
 
 
@@ -150,7 +150,7 @@ function geraCodigo()
 
     if ($conn->query($sql) === TRUE) {
 
-        header("Refresh: 10;url=../../view/expirado.php?id=$id");
+        header("Refresh: 10;url=../../view/msg/expirado.php?id=$id");
 
     } else {
         echo "deu erro " . $conn->error;
@@ -186,7 +186,7 @@ function novaSenha()
         }
 
     } else {
-        header("Refresh: 0;url='../view/email-expirado.php");
+        header("Refresh: 0;url='../view/msg/email-expirado.php");
     }
 
 
@@ -247,7 +247,7 @@ function bloqueiosPerfil()
             break;
         default:
             $situacao = "Por favor, verifique o seu endereço de e-mail para validação do cadastro";
-            $emailconf = "<a href='../controller/confirmaEmail.php'>Confirmar email</a><h3 class='mensagemAlerta'>após a confirmação do e-mail será necessario a atualização da pagina</h3>";
+            $emailconf = "<a href='../../controller/confirmaEmail.php'>Confirmar email</a><h3 class='mensagemAlerta'>após a confirmação do e-mail será necessario a atualização da pagina</h3>";
 
     }
 

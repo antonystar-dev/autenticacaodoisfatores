@@ -3,7 +3,7 @@
 if (is_file('./controller/ponte.php')) {
     require_once './controller/ponte.php';
 } else {
-    require_once '../controller/ponte.php';
+    require_once '../../controller/ponte.php';
 }
 situacaoLogin();
 bloqueiosPerfil();
@@ -39,7 +39,7 @@ if ($situacaoPerfil == "1") {
         <h2 class="tituloAlertaCodigo">
             <?php echo $emailconf ?? null; ?>
         </h2>
-        <span><a href="../controller/logoffController.php">Sair</a></span>
+        <span><a href="../../controller/logoffController.php">Sair</a></span>
 
     </div>
 </body>

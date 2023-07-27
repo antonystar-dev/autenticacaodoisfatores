@@ -27,7 +27,7 @@ if ($conn->query($gerapg) === TRUE) {
 
     }
   } else {
-    include '../view/email-expirado.php';
+    include '../view/msg/email-expirado.php';
   }
 
 

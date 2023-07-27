@@ -5,7 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Verificação de duas etapas</title>
     <?php
-    require './css/linkCSS.php';
+    require './view/css/linkCSS.php';
     ?>
     <style>
         body {
@@ -17,9 +17,9 @@
             min-height: 100vh;
         }
     </style>
-    <script src="./js/ocultamenu.js"></script>
+    <script src="./view/js/ocultamenu.js"></script>
     <?php
-    require './js/script.php';
+    require './view/js/script.php';
 
     ?>
 </head>

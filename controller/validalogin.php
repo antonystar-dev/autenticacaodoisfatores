@@ -33,7 +33,7 @@ if (is_file('./models/functions.php')) {
 situacaoLogin();
 if ($situacaoPerfil != "1" && $idverificador != null) {
     echo "<script>
-window.location.replace('$caminho/view/login-inativo.php');
+window.location.replace('$caminho/view/msg/login-inativo.php');
 </script>";
 
 } 

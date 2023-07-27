@@ -24,7 +24,7 @@ if (!empty($_SESSION["email"])) {
             localStorage.setItem("estadoAtual", "6")
             document.getElementById("corpo").innerHTML = `
                 <?php
-                require_once 'view/perfil.php';
+                require_once 'view/usr/perfil.php';
                 ?>`;
         }
 
@@ -59,7 +59,7 @@ if (!empty($_SESSION["email"])) {
         localStorage.setItem("estadoAtual", "1")
         document.getElementById("corpo").innerHTML = `
             <?php
-            require 'view/esqueci-senha.html';
+            require 'view/msg/esqueci-senha.html';
             ?>`
         ;
     }

@@ -1,10 +1,10 @@
 <?php
 if (is_file('./models/functions.php')) {
-    $caminho = "./";
+    $caminho = "./view/";
 } elseif (is_file('../../models/functions.php')) {
-    $caminho = "../../";
+    $caminho = "../../view/";
 } elseif (is_file('../models/functions.php')) {
-    $caminho = "../";
+    $caminho = "../view/";
 
 } else {
     echo "falha ao carregar o css";

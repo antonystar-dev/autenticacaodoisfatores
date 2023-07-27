@@ -12,10 +12,10 @@ confirmaLogin();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../js/validaFormulario.js"></script>
+    <script src="../view/js/validaFormulario.js"></script>
     <title>Gera Codigo</title>
     <?php
-    include '../css/linkCSS.php';
+    include '../view/css/linkCSS.php';
     ?>
 </head>
 
