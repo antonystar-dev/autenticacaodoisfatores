@@ -30,7 +30,7 @@ function enviaEmail()
     }
 
 
-    $emaildoservidor = "no-reply@antonystar.com";
+    $emaildoservidor = "noreply@antony-star.com";
     $assunto = $mensagemAssunto;
 
     $body = "===================================" . "\n";
