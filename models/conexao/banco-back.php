@@ -5,11 +5,11 @@ function dadosdeAcessoBD()
     if (!defined("HOST"))
         define("HOST", "localhost");
     if (!defined("BANCO"))
-        define('BANCO', 'login_db');
+        define('BANCO', 'bd');
     if (!defined("USUARIO"))
         define('USUARIO', 'root');
     if (!defined("SENHA"))
-        define('SENHA', "");
+        define('SENHA', "senha");
 
 }
 
