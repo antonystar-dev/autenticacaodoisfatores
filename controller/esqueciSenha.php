@@ -32,7 +32,7 @@ if (empty($email)) {
             $servidor = $_SERVER['SERVER_NAME'];
             $mensagemAssunto = "Reset de senha";
             $id2 = session_id();
-            $mensagemEmail = "Segue o link para a criação da nova senha em: http://$servidor/doisfatores/temp/$link.php?id=$id2";
+            $mensagemEmail = "Segue o link para a criação da nova senha em: http://$servidor/temp/$link.php?id=$id2";
             enviaEmail();
 
         }

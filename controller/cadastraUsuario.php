@@ -8,6 +8,8 @@ $senha = $_POST["senha"];
 //$senha = md5($_POST["senha"]);
 $email = $_POST["email"];
 $perfil_id = 2;
+$situacaoConta=4;
+$estLogin="DESLOGADO";
 
 
 
@@ -32,6 +34,8 @@ if (in_array($email, $verificaEmail)) {
     $usuarioDTO->setSenha($senha);
     $usuarioDTO->setEmail($email);
     $usuarioDTO->setPerfil_id($perfil_id);
+    $usuarioDTO->setSituacaoConta($situacaoConta);
+    $usuarioDTO->setEstLogin($estLogin);
 
 
     $usuarioDAO = new UsuarioDAO;
