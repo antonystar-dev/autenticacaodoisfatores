@@ -62,9 +62,9 @@
 }
 
 @media screen and (min-width: 1201px) {
-    body {
-        /* background-color: red; */
-    }
+    /*body {
+         background-color: red; 
+    }*/
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
@@ -206,13 +206,13 @@
     /* text-decoration: white; */
 
 }
-.divBotoesPerfil{
-    /*background-color: red;*/
-}
-.divBotoesEmail{
-   /* background-color: rgb(36, 104, 81);*/
+/*.divBotoesPerfil{
+    background-color: red;
+}*/
+ /*.divBotoesEmail{
+   background-color: rgb(36, 104, 81);
    
-}
+}*/
 .divBotoesSenha{
     
    align-items: center;
