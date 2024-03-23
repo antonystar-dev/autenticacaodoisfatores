@@ -24,10 +24,13 @@ if(isset( $_COOKIE[ $s_name ] )) {
     //echo "Session foi criada para $s_name.<br/>";
    // echo session_id();
 } else {
-    /* $msg = "Seção expirada.";
-    echo "<script>localStorage.setItem('mensagemNegativa', '$msg');
+    ?>
+     
+    <script>
+    //localStorage.setItem('mensagemNegativa', 'Seção expirada.');
+    localStorage.setItem("estadoAtual", "3");
     window.location.reload(true);
-    </script>"; */
-   
+    </script>"; 
+   <?php
 }
 ?>

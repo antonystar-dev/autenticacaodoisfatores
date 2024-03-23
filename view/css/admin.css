@@ -152,12 +152,77 @@
     width: 50%;
     border-radius: 0 25px;
     position: absolute;
-    top: 100px;
+    top: 70px;
+    
     left: 25%;
     /* text-align: center; */
     color: white;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
+
+}
+.perfil {
+    
+    background-color: rgb(73, 70, 70);
+    border: 2px solid black;
+    padding: 20px;
+    width: 50%;
+    border-radius: 0 25px;
+    margin-top: 40px;
+    left: 25%;
+    /* text-align: center; */
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    height: 105vh;
+
+}
+.senhaPerfil {
+    width: 45%;
+    padding: 12px;
+    /*   display: inline-block; */
+    margin: 5px;
+    border: 0px;
+    border-radius: 4px;
+    font-size: large;
+    position: relative;
+    /* text-decoration: white; */
+    margin-top: 20px;
+
+}
+.senhaPerfilAnterior {
+    width: 95%;
+    padding: 12px;
+    /*   display: inline-block; */
+    margin: 10px auto;
+    margin-left: 5px;
+    
+   border: 0px;
+    border-radius: 4px;
+   font-size: large;
+    position: relative;
+    /* text-decoration: white; */
+
+}
+.divBotoesPerfil{
+    /*background-color: red;*/
+}
+.divBotoesEmail{
+   /* background-color: rgb(36, 104, 81);*/
+   
+}
+.divBotoesSenha{
+    
+   align-items: center;
+   position: relative;
+}
+.divBotoesSenha2{
+display: flex;
+}
+.voltarPerfil{
+    
+    padding-left: 75%;
 
 }

@@ -71,7 +71,19 @@
 .botaoCarregar:hover {
     background-color: #33c27a;
 }
-
+.botaoAlterar {
+    width: 150px;
+    background-color: #0b9ef3;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-left: 40%;
+}
 .campoBotoesEsqSenha {
     /*  background-color: green;
       */

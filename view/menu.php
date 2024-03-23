@@ -1,4 +1,11 @@
+
+
 <div class="menu" id="menuPrincipal">
+<?php
+$seçãoPerfilcol = null;
+if (!empty($_SESSION["perfilcol"])) {
+    
+?>
     <div class="itens-menu-grupo">
         <span class="itens-menu">home</span>
         <span class="itens-menu">galeria</span>
@@ -9,7 +16,6 @@
         <?php
 
        
-        $seçãoPerfilcol = null;
         if (!empty($_SESSION["perfilcol"])) {
             $seçãoPerfilcol = $_SESSION["perfilcol"];
         }
@@ -23,15 +29,16 @@
                 echo'<a href="./controller/logoffController.php"><button  class="botao">Sair</button></a>';
                 break;
                 default:
-                echo'<button class="botao" onclick=login()>Entrar</button>';
-                echo'<button class="botao" onclick=cadastrar()>Cadastrar</button>';
+                //echo'<button class="botao" onclick=login()>Entrar</button>';
+                //echo'<button class="botao" onclick=cadastrar()>Cadastrar</button>';
             }
 
         ?>
-        
-        
-       
+                      
     </div>
+<?php
+}
+?>
 </div>
 <!--  <div>
     <h2>Menu extra desenvolvimento</h2>

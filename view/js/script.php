@@ -49,7 +49,7 @@ if (!empty($_SESSION["email"])) {
 ?>
 <script type="text/javascript">
     function paginaInicial() {
-        localStorage.setItem("estadoAtual", "0")
+        localStorage.setItem("estadoAtual", "3")
 
         window.location.reload(true);
 
@@ -110,18 +110,19 @@ if (!empty($_SESSION["email"])) {
                 pgPerfil();
                 break;
             default:
-                document.getElementById("corpo").innerHTML = `
+                //document.getElementById("corpo").innerHTML = `
             <?php
-            require_once 'view/inicio.html';
+           //require_once 'view/inicio.html';
 
-            ?>`;
+            ?>//`;
+            login();
 
         }
         mensagemAlerta();
 
     }
     function resetaEstado() {
-        localStorage.setItem("estadoAtual", "0");
+        localStorage.setItem("estadoAtual", "3");
     }
 
 
